@@ -329,11 +329,11 @@ body {
 }
 
 .whatsapp-contact input {
-  border: 2px solid rgb(102, 247, 102;
+  border: 2px solid rgb(102, 247, 102) !important;
 }
 
 .contact-form input {
-  border: 2px solid cyan;
+  border: 2px solid cyan !important;
 }
 
 .input-icon-wrapper {
