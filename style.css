@@ -5,6 +5,28 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+
+.nav {
+  border-bottom: none !important;
+}
+
+.nav-bar {
+  width: 95%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    width: 100%;
+  }
+}
+
 .cover-container {
   text-align: center;
   align-items: center;
@@ -65,6 +87,12 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    margin-top: 80px;
+  }
 }
 
 .social-links a {
