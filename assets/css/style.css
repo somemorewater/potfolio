@@ -153,6 +153,20 @@ header h1 {
   }
 }
 
+/* Desktop: sidebar visible */
+@media (min-width: 1025px) {
+  .home {
+    margin-left: 16em;
+    transition: margin-left 0.3s ease;
+  }
+
+  /* When sidebar is hidden */
+  .sidebar.hidden ~ .home {
+    margin-left: 0;
+  }
+}
+
+
 
 @media (max-width: 912px) {
   .home section {
