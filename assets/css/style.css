@@ -30,6 +30,9 @@ header h1 {
 
 .sidebar {
   display: flex;
+  position: fixed;
+  height: 100vh;
+  overflow: hidden;
   flex-direction: column;
   flex-shrink: 0;
   justify-content: space-between;
@@ -138,10 +141,18 @@ header h1 {
 .home {
   flex: 1;
   padding: 2em;
+  margin-left: 16em;
   background: linear-gradient(135deg, #f9f9f9, #f1f1f1);
   min-height: 100vh;
   transition: all 0.3s ease;
 }
+
+@media (max-width: 1024px) {
+  .home {
+    margin-left: 0;
+  }
+}
+
 
 @media (max-width: 912px) {
   .home section {
