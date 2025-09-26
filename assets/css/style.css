@@ -263,7 +263,7 @@ header h1 {
   color: goldenrod;
 }
 
-button:disabled {
+a:disabled {
   background-color: gray;
   color: white;
   cursor: not-allowed;
