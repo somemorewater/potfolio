@@ -12,7 +12,5 @@ document
 
       document.getElementById("whatsappName").value = "";
       document.getElementById("whatsappMessage").value = "";
-    } else {
-      alert("Please fill in both fields.");
     }
   });
