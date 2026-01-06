@@ -1,130 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects | Water - Ejeh Oboyilo</title>
     <meta name="description" content="Explore projects by Ejeh Oboyilo (Water) – Fullstack Developer & Physicist." />
     <meta name="author" content="Ejeh Oboyilo (Water)" />
     <link rel="shortcut icon" href="./assets/img/water.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@300;400;500;600&family=Righteous&display=swap" rel="stylesheet"/>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script defer src="./assets/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body>
-    <main class="d-flex flex-column flex-md-row">
-      <aside class="sidebar" role="navigation" aria-label="Main navigation">
-        <h2 class="logo">WATER - EJEH OBOYILO</h2>
-        <nav>
-          <ul>
+    <link rel="stylesheet" href="./assets/css/projects.css" />
+</head>
+<body>
+    <div class="liquid-bg">
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+    </div>
+
+    <canvas id="cursor-trail"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="water-icon">💧</span>
+            <span class="brand-text">WATER</span>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
             <li><a href="./index.html">About</a></li>
-            <li><a href="./projects.html"><s>Projects</s></a></li>
+            <li><a href="./projects.html" class="active">Projects</a></li>
             <li><a href="./contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <footer class="mt-auto text-center p-1">
-          <div class="d-flex justify-content-center gap-3 social">
-            <a href="https://github.com/somemorewater" target="_blank" class="text-dark fs-5"><i class="bi bi-github"></i></a>
-            <a href="https://x.com/SomeMoreWater" target="_blank" class="text-dark fs-5"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://instagram.com/somemorewater" target="_blank" class="text-dark fs-5"><i class="bi bi-instagram"></i></a>
-          </div>
-          <p class="small mb-2">&copy; 2025 Water (Ejeh Oboyilo). All rights reserved.</p>
-        </footer>
-      </aside>
+        </ul>
+    </nav>
 
-      <button class="menu-toggle" aria-label="Toggle menu"><i class="bi bi-list"></i></button>
-
-      <section class="home">
-        <header class="head">
-          <h1>My Projects</h1>
-          <p class="tagline">A showcase of apps, experiments, and problem-solving builds</p>
-        </header>
-
-        <section class="container py-4">
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm">
-                <img src="./assets/img/factorials.jpg" class="card-img-top" alt="Project 1 preview"/>
-                <div class="card-body">
-                  <h5 class="card-title">Solve This!</h5>
-                  <p class="card-text">This program calculates Factorials, permutations and Combinations. With JavaScript</p>
-                  <a href="https://somemorewater.github.io/factorials/" target="_blank" class="btn btn-dark btn-sm">Live Demo</a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm">
-                <img src="./assets/img/red.png" class="card-img-top" alt="Project 2 preview"/>
-                <div class="card-body">
-                  <h5 class="card-title">StudyGee</h5>
-                  <p class="card-text">Multi-platform study app serving past questions + AI-generated questions from a Node.js backend.</p>
-                  <a href="https://github.com/somemorewater/studygee" target="_blank" class="btn btn-dark btn-sm disabled-link">Live demo not available</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm">
-                <img src="./assets/img/age.jpg" class="card-img-top" alt="Project 3 preview"/>
-                <div class="card-body">
-                  <h5 class="card-title">Age Verifier with JavaScript</h5>
-                  <p class="card-text">This project demonstrates the use of JavaScript to create an interactive profile form that collects user data, calculates age.</p>
-                  <a href="https://somemorewater.github.io/javaScriptAgeChecker/" target="_blank" class="btn btn-dark btn-sm">Live Demo</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm">
-                <img src="./assets/img/flag.png" class="card-img-top" alt="Project 2 preview"/>
-                <div class="card-body">
-                  <h5 class="card-title">Nigerian Flag</h5>
-                  <p class="card-text">This code creates an interactive webpage with a custom cursor that mimics the appearance of the Nigerian flag, including the coat of arm at its center.</p>
-                  <a href="https://somemorewater.github.io/Nigerian-flag/" target="_blank" class="btn btn-dark btn-sm">Live Demo</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm">
-                <img src="./assets/img/ghost.png" class="card-img-top" alt="Project 2 preview"/>
-                <div class="card-body">
-                  <h5 class="card-title">Ghost Track</h5>
-                  <p class="card-text">GhostTrack is a backend service that integrates a python script into the web for tracking **IP addresses, phone numbers, and usernames** across multiple social media platforms.</p>
-                  <a href="https://ghost-tracker.onrender.com/" target="_blank" class="btn btn-dark btn-sm">Live Demo</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm">
-                <img src="./assets/img/wdc.jpg" class="card-img-top" alt="Project 6 preview"/>
-                <div class="card-body">
-                  <h5 class="card-title">Water Digital Corp.</h5>
-                  <p class="card-text">This project is a website for a company that builds website and digitalize small businesses so that they can thrive.</p>
-                  <a href="https://kenrideas.netlify.app/" target="_blank" class="btn btn-dark btn-sm">Live Demo</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm">
-                <img src="./assets/img/kenrideas.png" class="card-img-top" alt="Project 8 preview"/>
-                <div class="card-body">
-                  <h5 class="card-title">Kenri Ideas</h5>
-                  <p class="card-text">This project is a website for a graphics designer, displaying his work and putting himself out the to thrive.</p>
-                  <a href="https://waterdigitalcorp.name.ng" target="_blank" class="btn btn-dark btn-sm">Live Demo</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <main class="container projects-container">
+        <section class="page-header fade-in">
+            <h1 class="page-title">
+                <span class="title-number">02</span>
+                <span>My Projects</span>
+            </h1>
+            <p class="page-description">
+                A collection of apps, experiments, and solutions I've built to solve real problems
+            </p>
         </section>
-      </section>
+
+        <div class="filter-buttons fade-in" id="filter-buttons">
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading projects...</p>
+            </div>
+        </div>
+
+        <section class="projects-cta fade-in-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Have a Project in Mind?</h2>
+                <p class="cta-description">
+                    Let's collaborate and bring your ideas to life. I'm always excited to work on new challenges.
+                </p>
+                <a href="./contact.html" class="btn btn-primary">
+                    <span>Start a Conversation</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </section>
     </main>
-    <script src="./assets/js/toggle.js"></script>
-  </body>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://github.com/somemorewater" target="_blank" aria-label="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://x.com/SomeMoreWater" target="_blank" aria-label="Twitter">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="https://instagram.com/somemorewater" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+            <p class="footer-text">
+                Designed & Built by <span class="highlight">Water</span>
+            </p>
+            <p class="footer-copyright">
+                &copy; 2025 Ejeh Oboyilo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/projects.js"></script>
+</body>
 </html>

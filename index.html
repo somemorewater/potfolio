@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Water - Ejeh Oboyilo</title>
+    <title>Water - Ejeh Oboyilo | Fullstack Developer & Physicist</title>
     <meta name="description" content="Welcome to the official website of Ejeh Oboyilo (Water). Fullstack Developer, Physicist, and Problem Solver. Explore skills, projects, and ways to connect." />
     <meta name="keywords" content="Ejeh, Oboyilo, Water, Ejeh Oboyilo, Water Developer, Fullstack Developer, Physicist, Problem Solver, GitHub Water, SomeMoreWater" />
     <meta name="author" content="Ejeh Oboyilo (Water)" />
@@ -19,67 +19,273 @@
     <meta name="twitter:description" content="The official site of Water (Ejeh Oboyilo) – Fullstack Developer & Physicist." />
     <meta name="twitter:image" content="https://somemorewater.name.ng/assets/img/water.png" />
 
-    <link rel="canonical" href="https://https://somemorewater.name.ng" />
+    <link rel="canonical" href="https://somemorewater.name.ng" />
     <link rel="shortcut icon" href="./assets/img/water.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@300;400;500;600&family=Righteous&display=swap" rel="stylesheet"/>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
-    <script defer src="./assets/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <main class="d-flex flex-column flex-md-row">
-      <aside class="sidebar" role="navigation" aria-label="Main navigation">
-        <h2 class="logo">WATER - EJEH OBOYILO</h2>
-        <nav>
-          <ul>
-            <li><a href="./index.html"><s>About</s></a></li>
+</head>
+<body>
+    <div class="liquid-bg">
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+    </div>
+
+    <canvas id="cursor-trail"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="water-icon">💧</span>
+            <span class="brand-text">WATER</span>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="./index.html" class="active">About</a></li>
             <li><a href="./projects.html">Projects</a></li>
             <li><a href="./contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <footer class="mt-auto text-center p-1">
-          <div class="d-flex justify-content-center gap-3 social">
-            <a href="https://github.com/somemorewater" target="_blank" class="text-dark fs-5"><i class="bi bi-github"></i></a>
-            <a href="https://x.com/SomeMoreWater" target="_blank" class="text-dark fs-5"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://instagram.com/somemorewater" target="_blank" class="text-dark fs-5"><i class="bi bi-instagram"></i></a>
-          </div>
-          <p class="small mb-2">&copy; 2025 Water (Ejeh Oboyilo). All rights reserved.</p>
-        </footer>
-      </aside>
+        </ul>
+    </nav>
 
-      <button class="menu-toggle" aria-label="Toggle menu"><i class="bi bi-list"></i></button>
-      <section class="home">
-        <header class="head">
-          <h1>WATER - EJEH OBOYILO</h1>
-          <p class="tagline">Fullstack Developer • Physicist • Problem Solver</p>
-        </header>
-
-        <section class="d-flex">
-          <div class="ms-5 my-5 py-5 align-items-start hero">
-            <p>
-              I’m <strong>Ejeh Oboyilo</strong>, also known as <strong>Water</strong> —
-              a <span>Physicist</span> and <span>Fullstack Developer</span> passionate about building digital
-              experiences. My mission is to craft apps that are
-              <span>clean</span>, <span>functional</span>, and <span>fun</span>.
-            </p>
-          </div>
-          <div class="d-flex skills">
-            <h2>Skills</h2>
-            <div class="next">
-              <div class="skill"><img src="./assets/img/5847f5c3cef1014c0b5e489d.png" alt="HTML logo"/>HTML</div>
-              <div class="skill"><img src="./assets/img/5847f265cef1014c0b5e4868.png" alt="CSS logo"/>CSS</div>
-              <div class="skill"><img src="./assets/img/613b64fe30e8530004ba3a03.png" alt="JavaScript logo"/>JavaScript</div>
-              <div class="skill"><img src="./assets/img/62a76492bd73a4af5c5d4fb9.png" alt="Bootstrap logo"/>Bootstrap</div>
-              <div class="skill"><img src="./assets/img/62a75261223343fbc2207d09.png" alt="Node.js logo"/>Node.js</div>
-              <div class="skill"><img src="./assets/img/5847f981cef1014c0b5e48be.png" alt="Git logo"/>Git</div>
+    <main class="container">
+        <section class="hero-section fade-in">
+            <div class="hero-content">
+                <div class="greeting">
+                    <span class="wave-emoji">👋</span>
+                    <span>Hey there, I'm</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">EJEH</span>
+                    <span class="title-line">OBOYILO</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typed-text"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-description">
+                    A <span class="highlight">Physicist</span> turned <span class="highlight">Fullstack Developer</span> 
+                    who transforms complex problems into elegant digital solutions. I build experiences that are 
+                    <span class="highlight">clean</span>, <span class="highlight">functional</span>, 
+                    and <span class="highlight">delightful</span>.
+                </p>
+                <div class="hero-cta">
+                    <a href="./projects.html" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a href="./contact.html" class="btn btn-secondary">
+                        <span>Let's Connect</span>
+                        <i class="bi bi-chat-dots"></i>
+                    </a>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </div>
             </div>
-          </div>
         </section>
-      </section>
+
+        <section class="skills-section fade-in-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">01</span>
+                    <span>Technical Arsenal</span>
+                </h2>
+                <p class="section-description">Tools and technologies I work with daily</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="html">
+                    <div class="skill-icon">
+                        <img src="./assets/img/5847f5c3cef1014c0b5e489d.png" alt="HTML logo"/>
+                    </div>
+                    <h3 class="skill-name">HTML5</h3>
+                    <p class="skill-level">Expert</p>
+                </div>
+
+                <div class="skill-card" data-skill="css">
+                    <div class="skill-icon">
+                        <img src="./assets/img/5847f265cef1014c0b5e4868.png" alt="CSS logo"/>
+                    </div>
+                    <h3 class="skill-name">CSS3</h3>
+                    <p class="skill-level">Advanced</p>
+                </div>
+
+                <div class="skill-card" data-skill="javascript">
+                    <div class="skill-icon">
+                        <img src="./assets/img/613b64fe30e8530004ba3a03.png" alt="JavaScript logo"/>
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <p class="skill-level">Advanced</p>
+                </div>
+
+                <div class="skill-card" data-skill="bootstrap">
+                    <div class="skill-icon">
+                        <img src="./assets/img/62a76492bd73a4af5c5d4fb9.png" alt="Bootstrap logo"/>
+                    </div>
+                    <h3 class="skill-name">Bootstrap</h3>
+                    <p class="skill-level">Advanced</p>
+                </div>
+
+                <div class="skill-card" data-skill="nodejs">
+                    <div class="skill-icon">
+                        <img src="./assets/img/62a75261223343fbc2207d09.png" alt="Node.js logo"/>
+                    </div>
+                    <h3 class="skill-name">Node.js</h3>
+                    <p class="skill-level">Advanced</p>
+                </div>
+
+                <div class="skill-card" data-skill="git">
+                    <div class="skill-icon">
+                        <img src="./assets/img/5847f981cef1014c0b5e48be.png" alt="Git logo"/>
+                    </div>
+                    <h3 class="skill-name">Git</h3>
+                    <p class="skill-level">Expert</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section fade-in-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <div class="stat-number" data-target="7">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="bi bi-cup-hot"></i>
+                    </div>
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">Cups of Coffee</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="bi bi-github"></i>
+                    </div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">GitHub Commits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Problems Solved</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section fade-in-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">
+                        <span class="title-number">02</span>
+                        <span>About Me</span>
+                    </h2>
+                    <div class="about-description">
+                        <p>
+                            I'm a <strong>Physics undergraduate</strong> who fell in love with coding. 
+                            My journey started when a friend introduced me to web development in secondary school, 
+                            and I haven't looked back since.
+                        </p>
+                        <p>
+                            Today, I specialize in building <strong>full-stack web applications</strong> 
+                            that solve real problems. From elegant frontends to robust backends, 
+                            I bring the same analytical thinking I learned in physics to every line of code.
+                        </p>
+                        <p>
+                            When I'm not coding, you'll find me exploring new technologies, 
+                            contributing to open source, or diving deep into the latest physics discoveries.
+                        </p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Clean, maintainable code</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Performance optimization</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Responsive design</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>User-centric approach</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="window-title">developer.js</span>
+                        </div>
+                        <div class="window-content">
+                            <pre><code>const developer = {
+  name: "Water (Ejeh Oboyilo)",
+  role: "Fullstack Developer",
+  background: "Physics",
+  
+  skills: [
+    "JavaScript", "Node.js",
+    "HTML/CSS", "Bootstrap",
+    "Git", "Problem Solving"
+  ],
+  
+  currentFocus: "Building amazing web apps",
+  
+  lifePhilosophy: () => {
+    return "Code with purpose, design with passion";
+  }
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <script src="./assets/js/toggle.js"></script>
-  </body>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://github.com/somemorewater" target="_blank" aria-label="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://x.com/SomeMoreWater" target="_blank" aria-label="Twitter">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="https://instagram.com/somemorewater" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+            <p class="footer-text">
+                Designed & Built by <span class="highlight">Water</span>
+            </p>
+            <p class="footer-copyright">
+                &copy; 2025 Ejeh Oboyilo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
 </html>

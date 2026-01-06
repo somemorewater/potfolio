@@ -1,0 +1,180 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Solve This!",
+      "description": "An elegant calculator for factorials, permutations, and combinations. Built with vanilla JavaScript to help students and professionals solve complex mathematical problems instantly.",
+      "category": "tool",
+      "tags": ["JavaScript", "Math"],
+      "image": "./assets/img/factorials.jpg",
+      "liveUrl": "https://somemorewater.github.io/factorials/",
+      "githubUrl": null,
+      "featured": false,
+      "status": "live",
+      "stats": [
+        {
+          "icon": "bi-star-fill",
+          "label": "Educational Tool"
+        },
+        {
+          "icon": "bi-lightning-fill",
+          "label": "Fast Calculations"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "StudyGee",
+      "description": "Multi-platform study application serving past exam questions enhanced with AI-generated practice questions. Built with a robust Node.js backend for scalability and performance.",
+      "category": "backend",
+      "tags": ["Node.js", "AI", "Education"],
+      "image": "./assets/img/red.png",
+      "liveUrl": null,
+      "githubUrl": "https://github.com/somemorewater/studygee",
+      "featured": true,
+      "status": "development",
+      "stats": [
+        {
+          "icon": "bi-database",
+          "label": "Backend API"
+        },
+        {
+          "icon": "bi-cpu",
+          "label": "AI-Powered"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Age Verifier",
+      "description": "Interactive profile form demonstrating JavaScript form validation and age calculation. A practical example of client-side data processing and user interaction.",
+      "category": "web",
+      "tags": ["JavaScript", "Form"],
+      "image": "./assets/img/age.jpg",
+      "liveUrl": "https://somemorewater.github.io/javaScriptAgeChecker/",
+      "githubUrl": null,
+      "featured": false,
+      "status": "live",
+      "stats": [
+        {
+          "icon": "bi-code-square",
+          "label": "Vanilla JS"
+        },
+        {
+          "icon": "bi-check2-circle",
+          "label": "Form Validation"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Nigerian Flag Cursor",
+      "description": "Creative interactive webpage with a custom cursor that mimics the Nigerian flag, complete with the coat of arms. A fun demonstration of canvas manipulation and mouse tracking.",
+      "category": "web",
+      "tags": ["JavaScript", "Canvas", "Creative"],
+      "image": "./assets/img/flag.png",
+      "liveUrl": "https://somemorewater.github.io/Nigerian-flag/",
+      "githubUrl": null,
+      "featured": false,
+      "status": "live",
+      "stats": [
+        {
+          "icon": "bi-palette",
+          "label": "Creative"
+        },
+        {
+          "icon": "bi-cursor",
+          "label": "Custom Cursor"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "GhostTrack",
+      "description": "Backend service integrating Python scripts for tracking IP addresses, phone numbers, and usernames across multiple social media platforms. Powerful OSINT tool for digital investigations.",
+      "category": "backend",
+      "tags": ["Python", "Web Service", "API"],
+      "image": "./assets/img/ghost.png",
+      "liveUrl": "https://ghost-tracker.onrender.com/",
+      "githubUrl": null,
+      "featured": false,
+      "status": "live",
+      "stats": [
+        {
+          "icon": "bi-shield-check",
+          "label": "Security Tool"
+        },
+        {
+          "icon": "bi-search",
+          "label": "OSINT"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Water Digital Corp.",
+      "description": "Professional business website for a digital services company specializing in web development and digitalization for small businesses. Modern design with responsive layouts.",
+      "category": "web",
+      "tags": ["HTML/CSS", "Bootstrap", "Business"],
+      "image": "./assets/img/wdc.jpg",
+      "liveUrl": "https://waterdigitalcorp.name.ng",
+      "githubUrl": null,
+      "featured": false,
+      "status": "live",
+      "stats": [
+        {
+          "icon": "bi-briefcase",
+          "label": "Business Site"
+        },
+        {
+          "icon": "bi-phone",
+          "label": "Responsive"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Kenri Ideas",
+      "description": "Portfolio website for a graphics designer showcasing creative work and professional services. Clean, visual-focused design that puts the work front and center.",
+      "category": "web",
+      "tags": ["HTML/CSS", "Portfolio", "Design"],
+      "image": "./assets/img/kenrideas.png",
+      "liveUrl": "https://kenrideas.netlify.app/",
+      "githubUrl": null,
+      "featured": false,
+      "status": "live",
+      "stats": [
+        {
+          "icon": "bi-easel",
+          "label": "Portfolio"
+        },
+        {
+          "icon": "bi-images",
+          "label": "Visual-First"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "name": "All Projects",
+      "icon": "bi-grid-3x3"
+    },
+    {
+      "id": "web",
+      "name": "Web Apps",
+      "icon": "bi-globe"
+    },
+    {
+      "id": "tool",
+      "name": "Tools",
+      "icon": "bi-wrench"
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "icon": "bi-server"
+    }
+  ]
+}

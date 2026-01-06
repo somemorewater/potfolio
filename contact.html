@@ -1,115 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - Water</title>
-    <link
-      rel="shortcut icon"
-      href="./assets/img/water.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <title>Contact | Water - Ejeh Oboyilo</title>
+    <meta name="description" content="Get in touch with Ejeh Oboyilo (Water) – Let's collaborate and build something amazing together." />
+    <meta name="author" content="Ejeh Oboyilo (Water)" />
+    <link rel="shortcut icon" href="./assets/img/water.ico" type="image/x-icon"/>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <script defer src="./assets/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@300;400;500;600&family=Righteous&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <main class="d-flex flex-column flex-md-row">
-      <aside class="sidebar">
-        <h2 class="logo">WATER - Ejeh Oboyilo</h2>
-        <nav>
-          <ul>
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+</head>
+<body>
+    <div class="liquid-bg">
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+    </div>
+
+    <canvas id="cursor-trail"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="water-icon">💧</span>
+            <span class="brand-text">WATER</span>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
             <li><a href="./index.html">About</a></li>
             <li><a href="./projects.html">Projects</a></li>
-            <li><a href="./contact.html"><s>Contact</s></a></li>
-          </ul>
-        </nav>
-        <footer class="mt-auto text-center p-1">
-          <div class="d-flex justify-content-center gap-3">
-            <a href="https://github.com/somemorewater" target="_blank" class="text-dark fs-5"><i class="bi bi-github"></i></a>
-            <a href="https://x.com/SomeMoreWater" target="_blank" class="text-dark fs-5"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://instagram.com/somemorewater" target="_blank" class="text-dark fs-5"><i class="bi bi-instagram"></i></a>
-          </div>
-          <p class="small mb-2">&copy; 2025 Water. All rights reserved.</p>
-        </footer>
-      </aside>
-      <button class="menu-toggle" aria-label="Toggle menu">
-          <i class="bi bi-list"></i>
-        </button>
+            <li><a href="./contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
 
-      <section class="home">
-        <header class="head">
-          <h1>Contact Me</h1>
-          <p class="tagline">Let’s connect and build something amazing</p>
-        </header>
-
-        <section class="container py-5">
-            <div class="row g-4 contact">
-                <div class="col-md-4 contact-card">
-                <div class="p-4 border rounded shadow-sm h-100">
-                    <h4>Contact Information</h4>
-                    <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-geo-alt me-2 fs-5"></i>
-                    <span>Abuja, Nigeria</span>
-                    </div>
-                    <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-telephone me-2 fs-5"></i>
-                    <a href="tel:+2349078954418" class="text-decoration-none text-dark">+234 907 895 4418</a>
-                    </div>
-                    <div class="d-flex align-items-center">
-                    <i class="bi bi-envelope me-2 fs-5"></i>
-                    <a href="mailto:oboyiloejeh@gmail.com" id="email-link" class="text-decoration-none text-dark">oboyiloejeh@gmail.com</a>
-                    <i class="bi bi-clipboard ms-2 copy" onclick="copyEmail()"></i>
-                    </div>
-                    <p id="copy-message" class="text-success small mt-2" style="display:none;">Email copied!</p>
-                </div>
-                </div>
-
-                <div class="col-md-4 contact-card">
-                <div class="p-4 border rounded shadow-sm h-100">
-                    <h4>Send a Mail</h4>
-                    <form id="contactForm" onsubmit="sendEmail(); return false;">
-                    <input type="text" id="name" class="form-control mb-3" placeholder="Enter your name" required>
-                    <input type="email" id="email" class="form-control mb-3" placeholder="Enter your email" required>
-                    <div class="input-icon-wrapper position-relative">
-                        <input id="message" class="form-control message-input" placeholder="Your message here" required>
-                    </div>
-                    <button type="submit" class="btn btn-dark sub-btn">Send</button>
-                    </form>
-                </div>
-                </div>
-
-                <div class="col-md-4 contact-card">
-                <div class="p-4 border rounded shadow-sm h-100">
-                    <h4>Message Me on WhatsApp</h4>
-                    <form id="whatsappForm" onsubmit="sendWhatsAppMessage()">
-                    <input type="text" id="whatsappName" class="form-control mb-3" placeholder="Enter your name" required>
-                    <div class="input-icon-wrapper position-relative">
-                        <input type="text" id="whatsappMessage" class="form-control message-input" placeholder="Type your message" required>
-                    </div>
-                    <button type="submit" class="btn btn-dark sub-btn">Send</button>
-                    </form>
-                </div>
-                </div>
-            </div>
+    <main class="container contact-container">
+        <section class="page-header fade-in">
+            <h1 class="page-title">
+                <span class="title-number">03</span>
+                <span>Get In Touch</span>
+            </h1>
+            <p class="page-description">
+                Let's connect and create something extraordinary together
+            </p>
         </section>
 
-        
-      </section>
+        <div class="contact-layout">
+            <aside class="contact-info fade-in">
+                <div class="info-card">
+                    <div class="info-header">
+                        <div class="info-icon">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <h2>Let's Talk</h2>
+                    </div>
+                    <p class="info-description">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Location</h4>
+                                <p>Abuja, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+2349078954418">+234 907 895 4418</a>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Email</h4>
+                                <div class="email-container">
+                                    <a href="mailto:oboyiloejeh@gmail.com" id="email-link"><span>oboyiloejeh@gmail.com</span></a>
+                                </div>
+                                <span id="copy-message" class="copy-message">Copied!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Connect With Me</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/somemorewater" target="_blank" aria-label="GitHub" class="social-icon">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="https://x.com/SomeMoreWater" target="_blank" aria-label="Twitter" class="social-icon">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="https://instagram.com/somemorewater" target="_blank" aria-label="Instagram" class="social-icon">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="contact-forms">
+                <div class="form-card fade-in">
+                    <div class="form-header">
+                        <div class="form-icon">
+                            <i class="bi bi-envelope-paper"></i>
+                        </div>
+                        <h3>Send Me an Email</h3>
+                        <p>Fill out the form and I'll get back to you within 24 hours</p>
+                    </div>
+                    <form id="contactForm" class="contact-form" onsubmit="sendEmail(event)">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="bi bi-person"></i>
+                                Your Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name"
+                                placeholder="John Doe" 
+                                required
+                                class="form-input"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="bi bi-envelope"></i>
+                                Your Email
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email"
+                                name="email" 
+                                placeholder="john@example.com" 
+                                required
+                                class="form-input"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="bi bi-chat-text"></i>
+                                Your Message
+                            </label>
+                            <textarea 
+                                id="message"
+                                name="message" 
+                                placeholder="Tell me about your project or just say hi..." 
+                                required
+                                class="form-input"
+                                rows="5"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="bi bi-send"></i></span>
+                        </button>
+                    </form>
+                    <div id="form-status" class="form-status"></div>
+                </div>
+
+                <div class="form-card whatsapp-card fade-in">
+                    <div class="form-header">
+                        <div class="form-icon whatsapp-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <h3>Chat on WhatsApp</h3>
+                        <p>Send me a direct message for quick responses</p>
+                    </div>
+                    <form id="whatsappForm" class="contact-form" onsubmit="sendWhatsApp(event)">
+                        <div class="form-group">
+                            <label for="whatsappName">
+                                <i class="bi bi-person"></i>
+                                Your Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="whatsappName"
+                                name="whatsappName" 
+                                placeholder="John Doe" 
+                                required
+                                class="form-input"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsappMessage">
+                                <i class="bi bi-chat-dots"></i>
+                                Your Message
+                            </label>
+                            <textarea 
+                                id="whatsappMessage"
+                                name="whatsappMessage" 
+                                placeholder="Type your message here..." 
+                                required
+                                class="form-input"
+                                rows="5"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn whatsapp-btn">
+                            <span class="btn-text">Open WhatsApp</span>
+                            <span class="btn-icon"><i class="bi bi-whatsapp"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <section class="quick-actions fade-in-section">
+            <h2 class="section-subtitle">Or Choose Your Preferred Method</h2>
+            <div class="quick-links">
+                <a href="mailto:oboyiloejeh@gmail.com" class="quick-link">
+                    <div class="quick-icon">
+                        <i class="bi bi-envelope-at"></i>
+                    </div>
+                    <h4>Email Directly</h4>
+                    <p><span>oboyiloejeh@gmal.com</span></p>
+                </a>
+
+                <a href="tel:+2349078954418" class="quick-link">
+                    <div class="quick-icon">
+                        <i class="bi bi-telephone"></i>
+                    </div>
+                    <h4>Call Me</h4>
+                    <p>+234 907 895 4418</p>
+                </a>
+
+                <a href="https://github.com/somemorewater" target="_blank" class="quick-link">
+                    <div class="quick-icon">
+                        <i class="bi bi-github"></i>
+                    </div>
+                    <h4>GitHub</h4>
+                    <p>@somemorewater</p>
+                </a>
+
+                <a href="https://wa.me/2349078954418" target="_blank" class="quick-link">
+                    <div class="quick-icon">
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp</h4>
+                    <p>Chat now</p>
+                </a>
+            </div>
+        </section>
     </main>
-    <script src="./assets/js/toggle.js"></script>
-    <script src="./assets/js/copyscript.js"></script>
-    <script src="./assets/js/contactscript.js"></script>
-    <script src="./assets/js/whatsappscript.js"></script>
-  </body>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://github.com/somemorewater" target="_blank" aria-label="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://x.com/SomeMoreWater" target="_blank" aria-label="Twitter">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="https://instagram.com/somemorewater" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+            <p class="footer-text">
+                Designed & Built by <span class="highlight">Water</span>
+            </p>
+            <p class="footer-copyright">
+                &copy; 2025 Ejeh Oboyilo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/contact.js"></script>
+</body>
 </html>
+      
