@@ -1,6 +1,4 @@
-// ===================================
-// Cursor Trail Effect
-// ===================================
+
 const canvas = document.getElementById('cursor-trail');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -68,9 +66,7 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
 });
 
-// ===================================
 // Mobile Menu Toggle
-// ===================================
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -89,9 +85,8 @@ if (menuToggle) {
     });
 }
 
-// ===================================
+
 // Typing Effect for Hero Subtitle
-// ===================================
 const typedTextElement = document.querySelector('.typed-text');
 if (typedTextElement) {
     const roles = [
@@ -136,9 +131,7 @@ if (typedTextElement) {
     setTimeout(type, 1000);
 }
 
-// ===================================
 // Scroll Animations
-// ===================================
 const observerOptions = {
     threshold: 0.2,
     rootMargin: '0px 0px -100px 0px'
@@ -156,9 +149,7 @@ document.querySelectorAll('.fade-in-section').forEach(section => {
     observer.observe(section);
 });
 
-// ===================================
 // Stats Counter Animation
-// ===================================
 const statNumbers = document.querySelectorAll('.stat-number');
 
 function animateCounter(element) {
@@ -192,9 +183,7 @@ statNumbers.forEach(stat => {
     statsObserver.observe(stat);
 });
 
-// ===================================
 // Skill Card Hover Effects
-// ===================================
 const skillCards = document.querySelectorAll('.skill-card');
 
 skillCards.forEach(card => {
@@ -227,9 +216,7 @@ skillCards.forEach(card => {
     });
 });
 
-// ===================================
 // Smooth Scroll for Navigation Links
-// ===================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -243,9 +230,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===================================
 // Parallax Effect for Hero Section
-// ===================================
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroContent = document.querySelector('.hero-content');
@@ -256,9 +241,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===================================
 // Add Active Class to Current Nav Link
-// ===================================
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(link => {
     if (link.getAttribute('href') === `./${currentPage}`) {
@@ -266,9 +249,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     }
 });
 
-// ===================================
 // Code Window Syntax Highlighting
-// ===================================
 const codeContent = document.querySelector('.window-content code');
 if (codeContent) {
     const code = codeContent.textContent;
@@ -282,9 +263,7 @@ if (codeContent) {
     codeContent.innerHTML = highlighted;
 }
 
-// ===================================
 // Add Entrance Animations on Load
-// ===================================
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
     
@@ -295,9 +274,7 @@ window.addEventListener('load', () => {
     });
 });
 
-// ===================================
 // Easter Egg: Konami Code
-// ===================================
 let konamiCode = [];
 const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
@@ -333,9 +310,8 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ===================================
+
 // Performance: Reduce animations on low-end devices
-// ===================================
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('*').forEach(el => {
         el.style.animation = 'none';
@@ -343,5 +319,5 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     });
 }
 
-console.log('%c🌊 Welcome to Water\'s Portfolio! 🌊', 'color: #00d9ff; font-size: 20px; font-weight: bold;');
+console.log('%c Welcome to Water\'s Portfolio! ', 'color: #00d9ff; font-size: 20px; font-weight: bold;');
 console.log('%cLike what you see? Let\'s connect!', 'color: #7c3aed; font-size: 14px;');
