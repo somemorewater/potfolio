@@ -352,6 +352,4 @@ document.addEventListener('click', (e) => {
     }
 });
 
-console.log('🎨 Projects page loaded! Data will be fetched from projects.json');
-console.log('💡 Use number keys 1-4 to filter projects.');
 
