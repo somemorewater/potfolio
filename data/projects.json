@@ -167,7 +167,7 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi-coin-fill",
+          "icon": "bi bi-coin-fill",
           "label": "Finance Tool"
         },
         {
