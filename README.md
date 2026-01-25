@@ -140,8 +140,7 @@ The design follows a **"Digital Water Flow"** aesthetic:
 - Particle cursor trail
 
 ### Projects Page
-- 7 projects showcased
-- Filter by category (4 categories)
+- Filter by category
 - 3D card hover effects
 - Featured project highlighting
 - Live demo overlays
