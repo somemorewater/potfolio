@@ -187,10 +187,9 @@ The design follows a **"Digital Water Flow"** aesthetic:
 
 ## Easter Eggs
 
-1. **Konami Code**: Try the classic cheat code! (↑↑↓↓←→←→BA)
-2. **Console Messages**: Check the console for fun messages
-3. **Number Keys**: Press 1-4 to filter projects instantly
-4. **Keyboard Shortcuts**: Ctrl/Cmd + Enter submits forms
+1. **Console Messages**: Check the console for fun messages
+2. **Number Keys**: Press 1-4 to filter projects instantly
+3. **Keyboard Shortcuts**: Ctrl/Cmd + Enter submits forms
 
 ## Customization Guide
 
