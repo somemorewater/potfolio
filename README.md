@@ -85,7 +85,6 @@
 - **Modular CSS**: Separate files for each page
 - **Reusable Components**: DRY principles applied
 - **Console Messages**: Fun developer easter eggs
-- **Konami Code**: Hidden rainbow animation effect! 🎮
 
 ## File Structure
 
@@ -95,8 +94,9 @@ portfolio-enhanced/
 ├── projects.html           # Projects showcase (loads from JSON)
 ├── contact.html            # Contact page
 ├── data/
-│   ├── projects.json       # All project data (NEW!)
-│   └── PROJECTS_GUIDE.md   # How to manage projects
+│   ├── projects.json       # All project data
+│   └── PROJECTS_GUIDE.md   # How to
+ manage projects
 ├── assets/
 │   ├── css/
 │   │   ├── enhanced-style.css      # Main styles
