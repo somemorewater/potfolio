@@ -115,7 +115,7 @@ portfolio-enhanced/
 Projects are now stored in `data/projects.json` instead of hardcoded HTML:
 - **Cleaner Code**: HTML is just the template
 - **Easy Updates**: Edit one JSON file to add/remove projects
-- **Scalable**: Add 100 projects without touching HTML
+- **Scalable**: Add any amount projects without touching HTML
 - **Maintainable**: Separate data from presentation
 - **Future-Ready**: Easy to connect to CMS or API
 
