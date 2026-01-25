@@ -95,7 +95,6 @@ portfolio-enhanced/
 ├── contact.html            # Contact page
 ├── data/
 │   ├── projects.json       # All project data
-│   └── PROJECTS_GUIDE.md   # How to
  manage projects
 ├── assets/
 │   ├── css/
