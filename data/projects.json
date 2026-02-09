@@ -179,7 +179,7 @@
       {
       "id": 9,
       "title": "Share It",
-      "description": "Personal Finance Tracker is a full-stack web app that lets users securely track income and expenses. Users can add, edit, and delete transactions, categorize spending, and view balances, summaries, and charts. Built with Node.js, MongoDB, and vanilla JavaScript, it focuses on core CRUD operations, data modeling, and backend logic without bank integrations.",
+      "description": "A secure, peer-to-peer file sharing application built with WebRTC, Socket.IO, and Node.js. Transfer files directly between browsers with end-to-end encryption.",
       "category": "web",
       "tags": ["JavaScript", "HTML/CSS", "Node.js", "Express", "MongoDB", "Socket io", "WebRTC"],
       "image": "./assets/img/share-it.jpg",
