@@ -160,7 +160,7 @@
       "description": "A full-stack web app for securely tracking income and expenses, with CRUD features, categorization, summaries, and charts. Built using Node.js, MongoDB, and vanilla JavaScript.",
       "category": "web",
       "tags": ["JavaScript", "HTML/CSS", "Node.js", "Express", "MongoDB", "Finance"],
-      "image": "./assets/img/penny-wise.png",
+      "image": "./assets/img/penny.png",
       "liveUrl": "https://penny-wise-z9b9.onrender.com/",
       "githubUrl": "https://github.com/somemorewater/penny-wise",
       "featured": false,
