@@ -182,7 +182,7 @@
       "description": "A secure, peer-to-peer file sharing application built with WebRTC, Socket.IO, and Node.js. Transfer files directly between browsers with end-to-end encryption.",
       "category": "web",
       "tags": ["JavaScript", "HTML/CSS", "Node.js", "Express", "MongoDB", "Socket io", "WebRTC"],
-      "image": "./assets/img/share-it.png",
+      "image": "./assets/img/shareit.png",
       "liveUrl": "https://shareit.pxxl.click/",
       "githubUrl": "https://github.com/somemorewater/shareit",
       "featured": false,
