@@ -29,7 +29,7 @@
       "category": "backend",
       "tags": ["Node.js", "AI", "Education"],
       "image": "./assets/img/red.png",
-      "liveUrl": null,
+      "liveUrl": false,
       "githubUrl": "https://github.com/somemorewater/studygee",
       "featured": true,
       "status": "development",
