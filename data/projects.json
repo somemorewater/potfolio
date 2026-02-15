@@ -189,7 +189,7 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi bi-coin-fill",
+          "icon": "bi bi-card-image",
           "label": "File Sharing"
         },
         {
