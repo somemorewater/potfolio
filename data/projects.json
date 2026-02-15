@@ -157,7 +157,7 @@
     {
       "id": 8,
       "title": "Penny Wise",
-      "description": "Personal Finance Tracker is a full-stack web app that lets users securely track income and expenses. Users can add, edit, and delete transactions, categorize spending, and view balances, summaries, and charts. Built with Node.js, MongoDB, and vanilla JavaScript, it focuses on core CRUD operations, data modeling, and backend logic without bank integrations.",
+      "description": "Personal Finance Tracker is a full-stack web app that lets users securely track income and expenses. Users can add, edit, and delete transactions, categorize spending, and view balances, summaries, and charts. Built with Node.js, MongoDB, and vanilla JavaScript, it focuses on core CRUD operations, data modeling, and backend logic .",
       "category": "web",
       "tags": ["JavaScript", "HTML/CSS", "Node.js", "Express", "MongoDB", "Finance"],
       "image": "./assets/img/penny-wise.png",
