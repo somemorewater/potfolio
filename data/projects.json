@@ -204,7 +204,7 @@
       "description": "NexWAD is a full-stack campus platform built exclusively for students of the Air Force Institute of Technology (AFIT), combining a marketplace, social network, and real-time messaging system into a single ecosystem.",
       "category": "web",
       "tags": ["JavaScript", "React.js", "Node.js", "Express", "MongoDB", "Socket io"],
-      "image": "./assets/img/nexwad.jpg",
+      "image": "./assets/img/nexwad.png",
       "liveUrl": "https://nexwad.vercel.app",
       "githubUrl": false,
       "featured": true,
