@@ -211,11 +211,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi bi-card-image",
-          "label": "File Sharing"
+          "icon": "bi bi-cart4",
+          "label": "Shopping"
         },
         {
-          "icon": "bi-bar-chart-fill",
+          "icon": "bi bi-person-circle",
           "label": "P2P"
         }
       ]
