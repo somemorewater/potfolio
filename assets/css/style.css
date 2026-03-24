@@ -147,6 +147,13 @@ body {
     text-shadow: 0 0 20px var(--primary);
 }
 
+.brand-text {
+    display: inline-block;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
 .water-icon {
     font-size: 2rem;
     animation: float 3s ease-in-out infinite;
@@ -711,11 +718,25 @@ body {
     overflow-x: auto;
 }
 
+.window-content pre {
+    margin: 0;
+    white-space: pre;
+}
+
 .window-content code {
     font-family: var(--font-mono);
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--text-secondary);
+}
+
+.github-streak {
+    display: block;
+    max-width: min(760px, 100%);
+    width: 100%;
+    margin: 2.5rem auto 0;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
 
 .footer {
@@ -768,6 +789,16 @@ body {
     .navbar {
         padding: 1rem 5%;
     }
+
+    .nav-brand {
+        gap: 0.4rem;
+        max-width: 70%;
+    }
+
+    .brand-text {
+        font-size: clamp(0.9rem, 4vw, 1.2rem);
+        white-space: normal;
+    }
     
     .nav-links {
         position: fixed;
@@ -806,9 +837,31 @@ body {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
+    .github-streak {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
+    .nav-brand {
+        max-width: 65%;
+    }
+
+    .window-content {
+        padding: 1rem;
+    }
+
+    .window-content pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+
+    .window-content code {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
