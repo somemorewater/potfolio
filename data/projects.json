@@ -198,7 +198,7 @@
         }
       ]
     },
-      {
+    {
       "id": 10,
       "title": "NexWAD",
       "description": "NexWAD is a full-stack campus platform built exclusively for students of the Air Force Institute of Technology (AFIT), combining a marketplace, social network, and real-time messaging system into a single ecosystem.",
@@ -217,6 +217,28 @@
         {
           "icon": "bi bi-person-circle",
           "label": "P2P"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "WaterCast",
+      "description": "WaterCast is a live-streaming platform for sharing, learning, and collaborating. Built with Node.js and Express, it uses WebRTC for low-latency streams, Socket.IO for real-time chat, and MongoDB for user data and session logs.",
+      "category": "web",
+      "tags": ["Node.js", "Express", "WebRTC", "Socket.IO", "MongoDB", "Live Streaming"],
+      "image": "./assets/img/watercast-logo.webp",
+      "liveUrl": false,
+      "githubUrl": "https://github.com/somemorewater/water-cast",
+      "featured": false,
+      "status": "development",
+      "stats": [
+        {
+          "icon": "bi-broadcast",
+          "label": "Live Streaming"
+        },
+        {
+          "icon": "bi-chat-dots-fill",
+          "label": "Real-Time Chat"
         }
       ]
     }
