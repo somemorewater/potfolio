@@ -307,6 +307,28 @@
           "label": "TCP Server"
         }
       ]
+    },
+    {
+      "id": 15,
+      "title": "Chuks Kitchen API",
+      "description": "A modular food ordering backend built with Express.js, MongoDB, and Mongoose. It includes authentication with OTP verification, menu management, cart operations, and order processing with strict status handling, validation, edge-case protection, business-rule enforcement, and scalable REST API architecture.",
+      "category": "backend",
+      "tags": ["Node.js", "Express", "MongoDB", "Mongoose", "REST API", "Authentication"],
+      "image": "./assets/img/nodejs.png",
+      "liveUrl": false,
+      "githubUrl": "https://github.com/somemorewater/Trueminds-chuks-kitchen-api",
+      "featured": false,
+      "status": "live",
+      "stats": [
+        {
+          "icon": "bi-bag-check",
+          "label": "Order API"
+        },
+        {
+          "icon": "bi-shield-lock",
+          "label": "OTP Auth"
+        }
+      ]
     }
   ],
   "categories": [
