@@ -241,6 +241,28 @@
           "label": "Real-Time Chat"
         }
       ]
+    },
+    {
+      "id": 12,
+      "title": "Solana CRUD Smart Contract",
+      "description": "A beginner-friendly CRUD smart contract on the Solana blockchain built with Anchor and Rust. It supports creating, updating, fetching, and deleting test records through deterministic PDA-based accounts, with on-chain account management, event emission, ownership validation, and a global ID system using a Config account.",
+      "category": "blockchain",
+      "tags": ["Rust", "Solana", "Anchor", "Blockchain", "JavaScript"],
+      "image": "./assets/img/rustxsolana.jpeg",
+      "liveUrl": false,
+      "githubUrl": "https://github.com/somemorewater/smart-contracts-test",
+      "featured": false,
+      "status": "development",
+      "stats": [
+        {
+          "icon": "bi-link-45deg",
+          "label": "Solana Program"
+        },
+        {
+          "icon": "bi-shield-check",
+          "label": "PDA Accounts"
+        }
+      ]
     }
   ],
   "categories": [
@@ -263,6 +285,11 @@
       "id": "backend",
       "name": "Backend",
       "icon": "bi-server"
+    },
+    {
+      "id": "blockchain",
+      "name": "Blockchain",
+      "icon": "bi-link-45deg"
     }
   ]
 }
