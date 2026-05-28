@@ -111,25 +111,10 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 6px 12px 6px 6px;
+    padding: 0 12px;
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 800;
-}
-
-.brand-mark,
-.water-icon {
-    width: 34px;
-    height: 34px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--primary);
-    color: #07111f;
-    font-size: 1rem;
-    font-weight: 900;
-    font-family: var(--font-sans);
 }
 
 .brand-text {
