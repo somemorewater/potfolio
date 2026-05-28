@@ -112,15 +112,21 @@ function createProjectCard(project, index) {
                </a>`
             : '';
     
-    const footerLink = project.liveUrl 
-        ? `<a href="${project.liveUrl}" target="_blank" class="project-link">
-               View Project <i class="bi bi-arrow-right"></i>
+    const liveLink = project.liveUrl 
+        ? `<a href="${project.liveUrl}" target="_blank" class="project-link primary">
+               Open project <i class="bi bi-arrow-right"></i>
            </a>`
-        : project.githubUrl
-            ? `<a href="${project.githubUrl}" target="_blank" class="project-link">
-                   View on GitHub <i class="bi bi-arrow-right"></i>
-               </a>`
-            : `<span class="project-link disabled">Coming Soon</span>`;
+        : '';
+    
+    const githubLink = project.githubUrl
+        ? `<a href="${project.githubUrl}" target="_blank" class="project-link">
+               Source code <i class="bi bi-github"></i>
+           </a>`
+        : '';
+    
+    const footerLinks = liveLink || githubLink
+        ? `${liveLink}${githubLink}`
+        : `<span class="project-link disabled">Coming Soon</span>`;
     
     return `
         <article class="project-card ${project.featured ? 'featured' : ''}" data-category="${project.category}" data-index="${index}">
@@ -132,16 +138,20 @@ function createProjectCard(project, index) {
                 </div>
             </div>
             <div class="project-content">
-                <div class="project-tags">
-                    ${tags}
+                <div class="project-meta">
+                    <span class="project-category">${project.category}</span>
+                    <span class="status-badge">${project.status === 'development' ? 'In Development' : 'Live'}</span>
                 </div>
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
+                <div class="project-tags">
+                    ${tags}
+                </div>
                 <div class="project-stats">
                     ${stats}
                 </div>
                 <div class="project-footer">
-                    ${footerLink}
+                    ${footerLinks}
                 </div>
             </div>
         </article>
@@ -200,53 +210,8 @@ function attachProjectListeners() {
     const projectCards = document.querySelectorAll('.project-card');
     
     projectCards.forEach(card => {
-        // Parallax Effect on Images
-        const image = card.querySelector('.project-image img');
-        
-        card.addEventListener('mousemove', (e) => {
-            if (window.innerWidth < 768) return; // Skip on mobile
-            
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const deltaX = (x - centerX) / centerX;
-            const deltaY = (y - centerY) / centerY;
-            
-            if (image) {
-                image.style.transform = `scale(1.1) translate(${deltaX * 10}px, ${deltaY * 10}px)`;
-            }
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            if (image) {
-                image.style.transform = 'scale(1.1)';
-            }
-        });
-        
-        // 3D Tilt Effect on Cards
-        card.addEventListener('mousemove', (e) => {
-            if (window.innerWidth < 768) return; // Skip on mobile
-            
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 20;
-            const rotateY = (centerX - x) / 20;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-        });
+        card.addEventListener('focusin', () => card.classList.add('focused'));
+        card.addEventListener('focusout', () => card.classList.remove('focused'));
     });
 }
 
@@ -274,7 +239,7 @@ function showErrorMessage() {
 // Keyboard Navigation for Filters
 // ===================================
 document.addEventListener('keydown', (e) => {
-    if (e.key >= '1' && e.key <= '4' && projectsData) {
+    if (e.key >= '1' && e.key <= '9' && projectsData) {
         const index = parseInt(e.key) - 1;
         const filterButtons = document.querySelectorAll('.filter-btn');
         if (filterButtons[index]) {
@@ -351,5 +316,4 @@ document.addEventListener('click', (e) => {
         // You can send this to analytics if needed
     }
 });
-
 

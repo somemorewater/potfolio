@@ -4,33 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects | Water - Ejeh Oboyilo</title>
-    <meta name="description" content="Explore projects by Ejeh Oboyilo (Water) – Fullstack Developer & Physicist." />
+    <meta name="description" content="Explore backend systems, Rust experiments, product builds, and engineering projects by Ejeh Oboyilo (Water)." />
     <meta name="author" content="Ejeh Oboyilo (Water)" />
     <link rel="shortcut icon" href="./assets/img/water.ico" type="image/x-icon"/>
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@300;400;500;600&family=Righteous&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/projects.css" />
 </head>
 <body>
-    <div class="liquid-bg">
-        <div class="wave wave-1"></div>
-        <div class="wave wave-2"></div>
-        <div class="wave wave-3"></div>
-    </div>
-
-    <canvas id="cursor-trail"></canvas>
+    <div class="site-bg" aria-hidden="true"></div>
 
     <nav class="navbar">
-        <div class="nav-brand">
-            <span class="water-icon">💧</span>
+        <a href="./index.html" class="nav-brand" aria-label="Water home">
+            <span class="brand-mark">W</span>
             <span class="brand-text">WATER</span>
-        </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
             <span class="hamburger"></span>
         </button>
         <ul class="nav-links">
@@ -42,12 +36,13 @@
 
     <main class="container projects-container">
         <section class="page-header fade-in">
+            <p class="eyebrow">Selected engineering work</p>
             <h1 class="page-title">
-                <span class="title-number">02</span>
-                <span>My Projects</span>
+                <span>Systems, APIs, products, and experiments.</span>
             </h1>
             <p class="page-description">
-                A collection of apps, experiments, and solutions I've built to solve real problems
+                A portfolio of real software: Rust systems, production-ready backend APIs, realtime platforms,
+                blockchain programs, and user-facing products built with practical engineering tradeoffs.
             </p>
         </section>
 
@@ -63,9 +58,9 @@
 
         <section class="projects-cta fade-in-section">
             <div class="cta-content">
-                <h2 class="cta-title">Have a Project in Mind?</h2>
+                <h2 class="cta-title">Need someone who can think through systems and ship?</h2>
                 <p class="cta-description">
-                    Let's collaborate and bring your ideas to life. I'm always excited to work on new challenges.
+                    I am open to backend, infrastructure-minded product work, and ambitious engineering opportunities.
                 </p>
                 <a href="./contact.html" class="btn btn-primary">
                     <span>Start a Conversation</span>

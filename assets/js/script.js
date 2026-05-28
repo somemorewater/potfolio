@@ -1,79 +1,12 @@
-
-const canvas = document.getElementById('cursor-trail');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const particles = [];
-const mouse = { x: 0, y: 0 };
-
-class Particle {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.size = Math.random() * 5 + 1;
-        this.speedX = Math.random() * 3 - 1.5;
-        this.speedY = Math.random() * 3 - 1.5;
-        this.life = 1;
-    }
-
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        this.life -= 0.01;
-        if (this.size > 0.2) this.size -= 0.05;
-    }
-
-    draw() {
-        ctx.fillStyle = `rgba(0, 217, 255, ${this.life})`;
-        ctx.shadowBlur = 15;
-        ctx.shadowColor = 'rgba(0, 217, 255, 0.8)';
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
-
-window.addEventListener('mousemove', (e) => {
-    mouse.x = e.x;
-    mouse.y = e.y;
-    
-    for (let i = 0; i < 3; i++) {
-        particles.push(new Particle(mouse.x, mouse.y));
-    }
-});
-
-function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].draw();
-        
-        if (particles[i].life <= 0) {
-            particles.splice(i, 1);
-            i--;
-        }
-    }
-    
-    requestAnimationFrame(animateParticles);
-}
-
-animateParticles();
-
-window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});
-
 // Mobile Menu Toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+        const isOpen = navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
     });
 
     // Close menu when clicking outside
@@ -81,6 +14,7 @@ if (menuToggle) {
         if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
             navLinks.classList.remove('active');
             menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
         }
     });
 }
@@ -90,11 +24,11 @@ if (menuToggle) {
 const typedTextElement = document.querySelector('.typed-text');
 if (typedTextElement) {
     const roles = [
-        'Fullstack Developer',
-        'Problem Solver',
-        'Physicist',
-        'Code Enthusiast',
-        'Tech Explorer'
+        'Backend systems',
+        'Rust database internals',
+        'Node.js product APIs',
+        'Performance-focused development',
+        'Infrastructure-minded software'
     ];
     
     let roleIndex = 0;
@@ -183,39 +117,6 @@ statNumbers.forEach(stat => {
     statsObserver.observe(stat);
 });
 
-// Skill Card Hover Effects
-const skillCards = document.querySelectorAll('.skill-card');
-
-skillCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        // Add ripple effect
-        const ripple = document.createElement('div');
-        ripple.style.position = 'absolute';
-        ripple.style.borderRadius = '50%';
-        ripple.style.background = 'rgba(0, 217, 255, 0.3)';
-        ripple.style.width = '0';
-        ripple.style.height = '0';
-        ripple.style.top = '50%';
-        ripple.style.left = '50%';
-        ripple.style.transform = 'translate(-50%, -50%)';
-        ripple.style.transition = 'all 0.5s ease-out';
-        ripple.style.pointerEvents = 'none';
-        
-        card.style.position = 'relative';
-        card.appendChild(ripple);
-        
-        setTimeout(() => {
-            ripple.style.width = '300px';
-            ripple.style.height = '300px';
-            ripple.style.opacity = '0';
-        }, 0);
-        
-        setTimeout(() => {
-            ripple.remove();
-        }, 500);
-    });
-});
-
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -230,17 +131,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Parallax Effect for Hero Section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
-    
-    if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-        heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
-    }
-});
-
 // Add Active Class to Current Nav Link
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -249,66 +139,10 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     }
 });
 
-// Code Window Syntax Highlighting
-const codeContent = document.querySelector('.window-content code');
-if (codeContent) {
-    const code = codeContent.textContent;
-    const highlighted = code
-        .replace(/const|let|var|function|return/g, '<span style="color: #c792ea">$&</span>')
-        .replace(/"([^"]*)"/g, '<span style="color: #a5e844">"$1"</span>')
-        .replace(/\b(\d+)\b/g, '<span style="color: #f78c6c">$1</span>')
-        .replace(/\/\/.*/g, '<span style="color: #676e95">$&</span>')
-        .replace(/([a-zA-Z]+):/g, '<span style="color: #82aaff">$1</span>:');
-    
-    codeContent.innerHTML = highlighted;
-}
-
 // Add Entrance Animations on Load
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
-    
-    // Animate title lines
-    const titleLines = document.querySelectorAll('.title-line');
-    titleLines.forEach((line, index) => {
-        line.style.animation = `slide-in 0.8s ease-out ${index * 0.2}s both`;
-    });
 });
-
-// Easter Egg: Konami Code
-let konamiCode = [];
-const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-
-document.addEventListener('keydown', (e) => {
-    konamiCode.push(e.key);
-    konamiCode = konamiCode.slice(-10);
-    
-    if (konamiCode.join('') === konamiSequence.join('')) {
-        document.body.style.animation = 'rainbow 2s linear infinite';
-        setTimeout(() => {
-            document.body.style.animation = '';
-        }, 5000);
-    }
-});
-
-// Add rainbow animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes rainbow {
-        0% { filter: hue-rotate(0deg); }
-        100% { filter: hue-rotate(360deg); }
-    }
-    @keyframes slide-in {
-        from {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-`;
-document.head.appendChild(style);
 
 
 // Performance: Reduce animations on low-end devices
