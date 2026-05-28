@@ -285,6 +285,28 @@
           "label": "CBT Platform"
         }
       ]
+    },
+    {
+      "id": 14,
+      "title": "River",
+      "description": "A lightweight in-memory key-value database in Rust inspired by Redis. Built with a Tokio-based TCP server, RESP-style protocol parsing, TTL expiration, concurrent sharded storage, disk persistence with serde and bincode, and a modular networking and storage architecture for learning systems programming and database internals.",
+      "category": "backend",
+      "tags": ["Rust", "Tokio", "Database", "TCP", "Redis", "Systems Programming"],
+      "image": "./assets/img/river.png",
+      "liveUrl": "https://riverstore.vercel.app/",
+      "githubUrl": "https://github.com/somemorewater/river",
+      "featured": false,
+      "status": "development",
+      "stats": [
+        {
+          "icon": "bi-database",
+          "label": "Key-Value Store"
+        },
+        {
+          "icon": "bi-hdd-network",
+          "label": "TCP Server"
+        }
+      ]
     }
   ],
   "categories": [
