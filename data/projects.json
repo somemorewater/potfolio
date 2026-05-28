@@ -263,6 +263,28 @@
           "label": "PDA Accounts"
         }
       ]
+    },
+    {
+      "id": 13,
+      "title": "School Portal API",
+      "description": "A production-ready School Management and CBT backend API built with Node.js, Express, PostgreSQL, Prisma, Redis, and BullMQ. It includes JWT authentication, role-based access control, CBT session protection, background jobs, caching, Swagger API docs, and scalable REST APIs for students, exams, results, and blog management.",
+      "category": "backend",
+      "tags": ["Node.js", "Express", "PostgreSQL", "Prisma", "Redis", "BullMQ"],
+      "image": "./assets/img/nodejs.png",
+      "liveUrl": false,
+      "githubUrl": "https://github.com/somemorewater/school-portal-api",
+      "featured": false,
+      "status": "development",
+      "stats": [
+        {
+          "icon": "bi-shield-lock",
+          "label": "RBAC Auth"
+        },
+        {
+          "icon": "bi-mortarboard",
+          "label": "CBT Platform"
+        }
+      ]
     }
   ],
   "categories": [
