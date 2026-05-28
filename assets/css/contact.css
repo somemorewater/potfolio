@@ -12,8 +12,8 @@
 .page-title {
     margin-top: 12px;
     color: var(--text-primary);
-    font-size: clamp(2.8rem, 7vw, 5.6rem);
-    line-height: 0.98;
+    font-size: clamp(2.25rem, 5.4vw, 4.25rem);
+    line-height: 1.04;
     font-weight: 900;
     letter-spacing: 0;
 }
@@ -59,7 +59,7 @@
 .form-header h3,
 .section-subtitle {
     color: var(--text-primary);
-    font-size: 1.55rem;
+    font-size: 1.32rem;
     line-height: 1.2;
     font-weight: 850;
 }
