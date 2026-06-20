@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles | Water - Ejeh Oboyilo</title>
+    <meta name="description" content="Short essays, technical notes, and articles by Ejeh Oboyilo (Water)." />
+    <meta name="author" content="Ejeh Oboyilo (Water)" />
+    <link rel="shortcut icon" href="./assets/img/water.ico" type="image/x-icon"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/projects.css" />
+</head>
+<body>
+    <div class="site-bg" aria-hidden="true"></div>
+
+    <nav class="navbar">
+        <a href="./index.html" class="nav-brand" aria-label="Water home">
+            <span class="brand-text">WATER</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="./index.html">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./articles.html" class="active">Articles</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container projects-container">
+        <section class="page-header fade-in">
+            <p class="eyebrow">Thoughts, guides, and technical notes</p>
+            <h1 class="page-title">
+                <span>Articles and essays on engineering and design.</span>
+            </h1>
+            <p class="page-description">
+                Short-form and long-form writing: guides, postmortems, and technical explainers about systems, tooling, and product engineering.
+            </p>
+        </section>
+
+        <div class="filter-buttons fade-in" id="filter-buttons">
+        </div>
+
+        <div class="projects-grid" id="articles-grid">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading articles...</p>
+            </div>
+        </div>
+
+        <section class="projects-cta fade-in-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Want to collaborate on writing or engineering?</h2>
+                <p class="cta-description">
+                    I'm open to writing, technical reviews, and collaborative engineering work. Let's talk.
+                </p>
+                <a href="./contact.html" class="btn btn-primary">
+                    <span>Get in Touch</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://github.com/somemorewater" target="_blank" aria-label="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://x.com/SomeMoreWater" target="_blank" aria-label="Twitter">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="https://instagram.com/somemorewater" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+            <p class="footer-text">
+                Designed & Built by <span class="highlight">Water</span>
+            </p>
+            <p class="footer-copyright">
+                &copy; 2025 Ejeh Oboyilo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/articles.js"></script>
+</body>
+</html>
