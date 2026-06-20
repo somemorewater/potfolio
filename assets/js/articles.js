@@ -123,7 +123,8 @@ function createArticleCard(article, index) {
         : '';
     
     const absolute = `https://somemorewater.name.ng/articles/${article.slug || ('?id=' + article.id)}`;
-    const shareButton = `<button type="button" class="project-link share-btn" data-url="${absolute}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
+    const cleanAbsolute = stripHtmlExtension(absolute);
+    const shareButton = `<button type="button" class="project-link share-btn" data-url="${cleanAbsolute}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
 
     const footerLinks = (readLink || sourceLink)
         ? `${readLink}${sourceLink}${shareButton}`
@@ -204,6 +205,15 @@ function attachShareListeners() {
 
 function escapeHtml(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+// Remove trailing .html from URLs so shared links look clean
+function stripHtmlExtension(url) {
+    try {
+        return url.replace(/\.html(?=$|#|\?)/, '');
+    } catch (e) {
+        return url;
+    }
 }
 
 // ===================================
