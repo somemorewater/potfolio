@@ -104,14 +104,15 @@ function createArticleCard(article, index) {
         </div>
     `).join('') : '';
     
-    const overlayContent = article.status === 'development' 
+    const articleUrl = article.slug ? `./articles/${article.slug}.html` : `./article.html?id=${article.id}`;
+    const overlayContent = article.status === 'development'
         ? '<span class="status-badge">In Development</span>'
-        : `<a href="./article.html?id=${article.id}" class="preview-btn">
+        : `<a href="${articleUrl}" class="preview-btn">
                 <i class="bi bi-eye"></i>
                 <span>Read</span>
            </a>`;
-    
-    const readLink = `<a href="./article.html?id=${article.id}" class="project-link primary">
+
+    const readLink = `<a href="${articleUrl}" class="project-link primary">
                Read article <i class="bi bi-arrow-right"></i>
            </a>`;
     
@@ -121,7 +122,8 @@ function createArticleCard(article, index) {
            </a>`
         : '';
     
-    const shareButton = `<button type="button" class="project-link share-btn" data-url="./article.html?id=${article.id}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
+    const absolute = `https://somemorewater.name.ng/articles/${article.slug || ('?id=' + article.id)}`;
+    const shareButton = `<button type="button" class="project-link share-btn" data-url="${absolute}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
 
     const footerLinks = (readLink || sourceLink)
         ? `${readLink}${sourceLink}${shareButton}`

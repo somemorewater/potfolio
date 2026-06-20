@@ -44,7 +44,8 @@ async function loadArticle() {
         const statsHtml = (article.stats || []).map(s => `<div class="stat"><i class="${s.icon}"></i><span>${s.label}</span></div>`).join('');
 
         const sourceLink = article.sourceUrl ? `<a href="${article.sourceUrl}" target="_blank" class="project-link">Source <i class="bi bi-github"></i></a>` : '';
-        const shareButton = `<button type="button" class="project-link share-btn" data-url="${location.href}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
+        const slugUrl = article.slug ? `https://somemorewater.name.ng/articles/${article.slug}.html` : location.href;
+        const shareButton = `<button type="button" class="project-link share-btn" data-url="${slugUrl}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
 
         container.innerHTML = `
             ${imgHtml}
