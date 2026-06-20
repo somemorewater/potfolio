@@ -44,25 +44,24 @@ async function loadArticle() {
         const statsHtml = (article.stats || []).map(s => `<div class="stat"><i class="${s.icon}"></i><span>${s.label}</span></div>`).join('');
 
         const sourceLink = article.sourceUrl ? `<a href="${article.sourceUrl}" target="_blank" class="project-link">Source <i class="bi bi-github"></i></a>` : '';
+        const shareButton = `<button type="button" class="project-link share-btn" data-url="${location.href}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
 
         container.innerHTML = `
-                const sourceLink = article.sourceUrl ? `<a href="${article.sourceUrl}" target="_blank" class="project-link">Source <i class="bi bi-github"></i></a>` : '';
-                const shareButton = `<button type="button" class="project-link share-btn" data-url="${location.href}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
+            ${imgHtml}
+            <div class="article-body">${article.content || '<p>No content available.</p>'}</div>
+            <div class="project-tags">${tagsHtml}</div>
+            <div class="project-stats">${statsHtml}</div>
+            <div class="project-footer">
+                <a href="./articles.html" class="project-link">Back to articles</a>
+                ${sourceLink}
+                ${shareButton}
+            </div>
+        `;
 
-                container.innerHTML = `
-                    ${imgHtml}
-                    <div class="article-body">${article.content || '<p>No content available.</p>'}</div>
-                    <div class="project-tags">${tagsHtml}</div>
-                    <div class="project-stats">${statsHtml}</div>
-                    <div class="project-footer">
-                        <a href="./articles.html" class="project-link">Back to articles</a>
-                        ${sourceLink}
-                        ${shareButton}
-                    </div>
-                `;
+        // Attach share handler for the reader share button
+        setupArticleShare();
 
-                // Attach share handler for the reader share button
-                setupArticleShare();
+    } catch (err) {
         console.error(err);
         const container = document.getElementById('article-content');
         container.innerHTML = '<div class="error-message">Failed to load article. Please try again.</div>';
