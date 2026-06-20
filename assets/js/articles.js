@@ -104,7 +104,7 @@ function createArticleCard(article, index) {
         </div>
     `).join('') : '';
     
-    const articleUrl = article.slug ? `./articles/${article.slug}.html` : `./article.html?id=${article.id}`;
+    const articleUrl = `./article.html?id=${article.id}`;
     const overlayContent = article.status === 'development'
         ? '<span class="status-badge">In Development</span>'
         : `<a href="${articleUrl}" class="preview-btn">
@@ -122,9 +122,8 @@ function createArticleCard(article, index) {
            </a>`
         : '';
     
-    const absolute = `https://somemorewater.name.ng/articles/${article.slug || ('?id=' + article.id)}`;
-    const cleanAbsolute = stripHtmlExtension(absolute);
-    const shareButton = `<button type="button" class="project-link share-btn" data-url="${cleanAbsolute}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
+    const absolute = `https://somemorewater.name.ng/article.html?id=${article.id}`;
+    const shareButton = `<button type="button" class="project-link share-btn" data-url="${absolute}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
 
     const footerLinks = (readLink || sourceLink)
         ? `${readLink}${sourceLink}${shareButton}`
@@ -207,14 +206,7 @@ function escapeHtml(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-// Remove trailing .html from URLs so shared links look clean
-function stripHtmlExtension(url) {
-    try {
-        return url.replace(/\.html(?=$|#|\?)/, '');
-    } catch (e) {
-        return url;
-    }
-}
+
 
 // ===================================
 // Handle Filter Click

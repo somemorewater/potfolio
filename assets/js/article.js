@@ -44,9 +44,8 @@ async function loadArticle() {
         const statsHtml = (article.stats || []).map(s => `<div class="stat"><i class="${s.icon}"></i><span>${s.label}</span></div>`).join('');
 
         const sourceLink = article.sourceUrl ? `<a href="${article.sourceUrl}" target="_blank" class="project-link">Source <i class="bi bi-github"></i></a>` : '';
-        const slugUrl = article.slug ? `https://somemorewater.name.ng/articles/${article.slug}.html` : location.href;
-        const cleanSlugUrl = stripHtmlExtension(slugUrl);
-        const shareButton = `<button type="button" class="project-link share-btn" data-url="${cleanSlugUrl}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
+        const slugUrl = `https://somemorewater.name.ng/article.html?id=${article.id}`;
+        const shareButton = `<button type="button" class="project-link share-btn" data-url="${slugUrl}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
 
         container.innerHTML = `
             ${imgHtml}
@@ -110,10 +109,3 @@ window.addEventListener('load', loadArticle);
             });
         }
 
-        function stripHtmlExtension(url) {
-            try {
-                return url.replace(/\.html(?=$|#|\?)/, '');
-            } catch (e) {
-                return url;
-            }
-        }
