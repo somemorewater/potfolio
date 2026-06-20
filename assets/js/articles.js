@@ -79,6 +79,7 @@ function renderArticles(filterCategory = 'all') {
     
     // Add event listeners for interactive features
     attachProjectListeners();
+    attachShareListeners();
 }
 
 // ===================================
@@ -120,9 +121,11 @@ function createArticleCard(article, index) {
            </a>`
         : '';
     
-    const footerLinks = readLink || sourceLink
-        ? `${readLink}${sourceLink}`
-        : `<span class="project-link disabled">Coming Soon</span>`;
+    const shareButton = `<button type="button" class="project-link share-btn" data-url="./article.html?id=${article.id}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
+
+    const footerLinks = (readLink || sourceLink)
+        ? `${readLink}${sourceLink}${shareButton}`
+        : `<span class="project-link disabled">Coming Soon</span>${shareButton}`;
     
     return `
         <article class="project-card ${article.featured ? 'featured' : ''}" data-category="${article.category}" data-index="${index}">
@@ -152,6 +155,53 @@ function createArticleCard(article, index) {
             </div>
         </article>
     `;
+}
+
+// ===================================
+// Share helpers
+// ===================================
+function shareOrCopy(url, title) {
+    if (navigator.share) {
+        navigator.share({ title: title, url: url }).catch(err => {
+            console.warn('Share failed:', err);
+        });
+        return;
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+            alert('Link copied to clipboard');
+        }).catch(() => {
+            fallbackCopyText(url);
+        });
+    } else {
+        fallbackCopyText(url);
+    }
+}
+
+function fallbackCopyText(text) {
+    const tmp = document.createElement('textarea');
+    tmp.value = text;
+    tmp.style.position = 'fixed';
+    tmp.style.left = '-9999px';
+    document.body.appendChild(tmp);
+    tmp.select();
+    try { document.execCommand('copy'); alert('Link copied to clipboard'); } catch (e) { prompt('Copy this link', text); }
+    document.body.removeChild(tmp);
+}
+
+function attachShareListeners() {
+    document.querySelectorAll('.share-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const url = btn.getAttribute('data-url');
+            const title = btn.getAttribute('data-title') || document.title;
+            shareOrCopy(url, title);
+        });
+    });
+}
+
+function escapeHtml(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
 // ===================================
