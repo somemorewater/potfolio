@@ -24,11 +24,11 @@ if (menuToggle) {
 const typedTextElement = document.querySelector('.typed-text');
 if (typedTextElement) {
     const roles = [
-        'Backend systems',
-        'Rust database internals',
-        'Node.js product APIs',
-        'Performance-focused development',
-        'Infrastructure-minded software'
+        'Backend systems and APIs',
+        'Storage and database internals',
+        'Real-time platforms',
+        'Products from concept to launch',
+        'Reliability and maintainability'
     ];
     
     let roleIndex = 0;
@@ -95,10 +95,10 @@ function animateCounter(element) {
     const updateCounter = () => {
         current += increment;
         if (current < target) {
-            element.textContent = Math.floor(current);
+            element.textContent = Math.floor(current) + '+';
             requestAnimationFrame(updateCounter);
         } else {
-            element.textContent = target;
+            element.textContent = target + '+';
         }
     };
 

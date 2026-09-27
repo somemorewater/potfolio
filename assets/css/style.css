@@ -417,8 +417,7 @@ a {
 .about-section,
 .skills-section,
 .featured-section,
-.principles-section,
-.github-section {
+.principles-section {
     padding: 58px 0;
 }
 
@@ -586,15 +585,6 @@ a {
     padding: 24px;
 }
 
-.github-streak {
-    width: min(760px, 100%);
-    margin: 0 auto;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    background: var(--surface);
-    box-shadow: var(--shadow-soft);
-}
-
 .footer {
     margin-top: 40px;
     border-top: 1px solid var(--border);
@@ -757,8 +747,7 @@ a {
     .about-section,
     .skills-section,
     .featured-section,
-    .principles-section,
-    .github-section {
+    .principles-section {
         padding: 42px 0;
     }
 }
