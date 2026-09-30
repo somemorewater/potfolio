@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "River",
-      "description": "A lightweight key-value database inspired by Redis, built to explore networking, concurrency, persistence, and storage. Includes protocol parsing, TTL expiration, sharded storage, and a modular networking and storage layout.",
+      "description": "A lightweight Redis-inspired key-value database built in Rust to explore systems programming, networking, concurrency, and persistence. It includes a custom TCP protocol, TTL-based expiration, sharded storage, and modular storage and networking layers.",
       "category": "backend",
       "tags": [
         "Rust",
@@ -32,7 +32,7 @@
     {
       "id": 2,
       "title": "StudyGee",
-      "description": "A study app serving past exam questions alongside AI-generated practice. I worked on the backend behind questions, users, and study flows, and on making it hold up as a multi-platform product.",
+      "description": "A Nigerian learning platform for exam practice, study materials, and AI-assisted learning. I built the backend systems powering users, subjects, questions, authentication, and study flows, with the architecture designed to support multiple platforms.",
       "category": "backend",
       "tags": ["Rust/Axum", "AI", "Education"],
       "image": "./assets/img/studygee-logo1.webp",
@@ -54,7 +54,7 @@
     {
       "id": 3,
       "title": "Penny Wise",
-      "description": "An app for tracking income and expenses, with categorization, summaries, and charts. I built the full flow from data model and API to the interface for managing everyday finances.",
+      "description": "A personal finance application for tracking income and expenses, organizing transactions, and visualizing spending patterns. I built the complete application flow, from the data model and REST API to the frontend experience and financial summaries.",
       "category": "web",
       "tags": [
         "JavaScript",
@@ -83,7 +83,7 @@
     {
       "id": 4,
       "title": "Share It",
-      "description": "A peer-to-peer file-sharing app that moves files directly between browsers. The interesting work was in signaling, setting up direct transfers, and keeping the exchange private.",
+      "description": "A peer-to-peer file-sharing application that transfers files directly between browsers using WebRTC. The system uses Socket.IO for signaling while keeping the actual file transfer between connected peers.",
       "category": "web",
       "tags": [
         "JavaScript",
@@ -113,7 +113,7 @@
     {
       "id": 5,
       "title": "NexWAD",
-      "description": "A campus platform for students of the Air Force Institute of Technology (AFIT), combining a marketplace, social network, and real-time messaging in one ecosystem. The challenge was making those three products feel like one coherent system.",
+      "description": "A campus platform for AFIT students combining a marketplace, social network, lost-and-found features, and real-time messaging. The platform brings multiple student services together through a shared backend and real-time communication layer.",
       "category": "web",
       "tags": [
         "JavaScript",
@@ -131,18 +131,18 @@
       "stats": [
         {
           "icon": "bi bi-cart4",
-          "label": "Shopping"
+          "label": "Marketplace"
         },
         {
           "icon": "bi bi-person-circle",
-          "label": "P2P"
+          "label": "Social Platform"
         }
       ]
     },
     {
       "id": 6,
       "title": "WaterCast",
-      "description": "WaterCast is a live-streaming platform for sharing, learning, and collaborating. The core work is low-latency streaming paired with real-time chat, plus user data and session handling behind the scenes.",
+      "description": "A live-streaming platform built around real-time video, chat, and session management. The backend combines WebRTC and Socket.IO to coordinate low-latency communication while handling users, sessions, and supporting application data.",
       "category": "web",
       "tags": [
         "Node.js",
@@ -171,7 +171,7 @@
     {
       "id": 7,
       "title": "Solana CRUD Smart Contract",
-      "description": "An on-chain CRUD program for creating, updating, fetching, and deleting records. Built to learn account management on Solana — deterministic PDA accounts, ownership checks, event emission, and a global ID system.",
+      "description": "An on-chain CRUD program built with Rust and Anchor for creating, updating, fetching, and deleting records on Solana. It explores PDA-based account management, ownership validation, event emission, and deterministic on-chain state.",
       "category": "blockchain",
       "tags": ["Rust", "Solana", "Anchor", "Blockchain", "JavaScript"],
       "image": "./assets/img/rustxsolana.webp",
@@ -193,7 +193,7 @@
     {
       "id": 8,
       "title": "School Portal API",
-      "description": "A school management and CBT backend covering students, exams, results, and timed test sessions. The work centered on auth and roles, session protection, background jobs, caching, and clear API docs.",
+      "description": "A school management and CBT backend for students, courses, examinations, results, and timed test sessions. It implements role-based access control, protected sessions, Redis caching, background jobs, and structured API documentation.",
       "category": "backend",
       "tags": ["Node.js", "Express", "PostgreSQL", "Prisma", "Redis", "BullMQ"],
       "image": "./assets/img/nodejs-bg.webp",
@@ -215,7 +215,7 @@
     {
       "id": 9,
       "title": "Chuks Kitchen API",
-      "description": "A food-ordering backend covering menus, carts, and orders. I focused on OTP authentication, strict order-status handling, validation, and enforcing real business rules without breaking the API flow.",
+      "description": "A production-style food ordering API covering menus, carts, orders, authentication, and order lifecycle management. It uses OTP authentication, request validation, strict state transitions, and business-rule enforcement across the ordering flow.",
       "category": "backend",
       "tags": [
         "Node.js",
@@ -244,7 +244,7 @@
     {
       "id": 10,
       "title": "Predicta - Solana Prediction Market dApp",
-      "description": "A decentralized prediction market on Solana for creating markets, trading YES/NO positions, providing liquidity, and claiming rewards. Built with Rust and Anchor to explore secure smart contract architecture, deterministic PDAs, token management, market settlement, and on-chain state management.",
+      "description": "A decentralized prediction market built on Solana for creating markets, trading YES/NO positions, providing liquidity, and claiming rewards. The project explores smart contract architecture, PDA design, token management, market settlement, liquidity, and on-chain state management.",
       "category": "blockchain",
       "tags": [
         "Rust",
@@ -278,7 +278,7 @@
     {
       "id": 11,
       "title": "Talent Flow - Learning Management System",
-      "description": "A web-based learning management system for managing courses, lessons, learning materials, and student progress. Built to provide a structured platform for delivering educational content and managing the learning experience.",
+      "description": "A web-based learning management system for organizing courses, lessons, learning materials, and student progress. The platform provides a structured workflow for delivering educational content and managing the learning experience.",
       "category": "web",
       "tags": [
         "JavaScript",
@@ -309,8 +309,51 @@
     },
     {
       "id": 12,
+      "title": "FlowPay - Multi-Currency Payment Gateway",
+      "description": "A multi-currency payment gateway demonstrating end-to-end processing across fiat and cryptocurrency. FlowPay combines Node.js, Rust, PostgreSQL, and Solana Devnet for wallets, payments, currency conversion, betting transactions, blockchain verification, and reliable settlement with a double-entry ledger.",
+      "category": "backend",
+      "tags": [
+        "Node.js",
+        "TypeScript",
+        "Rust",
+        "Web3",
+        "Blockchain",
+        "Payment Gateway",
+        "Backend",
+        "Distributed Systems",
+        "REST API",
+        "Docker",
+        "Cryptocurrency",
+        "Solana Devnet"
+      ],
+      "image": "./assets/img/flow-pay.webp",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/somemorewater/flow-pay",
+      "featured": false,
+      "status": "development",
+      "stats": [
+        {
+          "icon": "bi-currency-exchange",
+          "label": "Multi-Currency"
+        },
+        {
+          "icon": "bi-link-45deg",
+          "label": "Blockchain Payments"
+        },
+        {
+          "icon": "bi-database",
+          "label": "Double-Entry Ledger"
+        },
+        {
+          "icon": "bi-cpu",
+          "label": "Rust Settlement"
+        }
+      ]
+    },
+    {
+      "id": 13,
       "title": "GhostTrack",
-      "description": "A backend for OSINT lookups across IP addresses, phone numbers, and usernames. It wraps several lookup scripts behind one web service so investigations run from a single place.",
+      "description": "A web service that brings multiple OSINT lookup capabilities behind a unified API. It integrates lookup tools for IP addresses, phone numbers, and usernames into a single service for streamlined investigation workflows.",
       "category": "backend",
       "tags": ["Python", "Web Service", "API"],
       "image": "./assets/img/ghost.webp",
@@ -330,9 +373,9 @@
       ]
     },
     {
-      "id": 13,
+      "id": 14,
       "title": "Water Digital Corp.",
-      "description": "A business site for a digital services company helping small businesses get online. Built as a clean, responsive site focused on presenting services and converting visitors.",
+      "description": "A responsive business website for a digital services company helping small businesses establish an online presence. The site focuses on clear service presentation, responsive design, and turning visitors into potential clients.",
       "category": "web",
       "tags": ["HTML/CSS", "Bootstrap", "Business"],
       "image": "./assets/img/wdc.webp",
@@ -352,9 +395,9 @@
       ]
     },
     {
-      "id": 14,
+      "id": 15,
       "title": "Kenri Ideas",
-      "description": "A portfolio site for a graphic designer to showcase work and services. Designed visual-first so the work itself stays front and center.",
+      "description": "A portfolio website for a graphic designer built around visual presentation. The layout keeps the designer's work at the center while providing a clean way to showcase services and creative projects.",
       "category": "web",
       "tags": ["HTML/CSS", "Portfolio", "Design"],
       "image": "./assets/img/kenrideas.webp",
@@ -374,9 +417,9 @@
       ]
     },
     {
-      "id": 15,
+      "id": 16,
       "title": "Age Verifier",
-      "description": "A profile form that validates input and calculates age instantly. A small exercise in client-side validation, date handling, and clear user feedback.",
+      "description": "A lightweight JavaScript application that validates profile information and calculates age from a user's date of birth. Built as a focused exercise in client-side validation, date handling, and immediate user feedback.",
       "category": "web",
       "tags": ["JavaScript", "Form"],
       "image": "./assets/img/age.webp",
@@ -396,9 +439,9 @@
       ]
     },
     {
-      "id": 16,
+      "id": 17,
       "title": "Solve This!",
-      "description": "A calculator for factorials, permutations, and combinations that gives students and professionals instant answers to combinatorics problems. The focus was correct math handling and a fast, simple interface.",
+      "description": "A combinatorics calculator for factorials, permutations, and combinations. It provides fast, accurate calculations through a simple interface designed for students and anyone working with basic counting problems.",
       "category": "tool",
       "tags": ["JavaScript", "Math"],
       "image": "./assets/img/factorials.webp",
@@ -418,9 +461,9 @@
       ]
     },
     {
-      "id": 17,
+      "id": 18,
       "title": "Nigerian Flag Cursor",
-      "description": "An interactive page with a custom cursor styled after the Nigerian flag, complete with the coat of arms. Built around canvas rendering and precise mouse tracking.",
+      "description": "An interactive canvas experiment featuring a custom cursor inspired by the Nigerian flag and coat of arms. It combines canvas rendering with real-time mouse tracking to create a responsive visual effect.",
       "category": "web",
       "tags": ["JavaScript", "Canvas", "Creative"],
       "image": "./assets/img/flag.webp",
