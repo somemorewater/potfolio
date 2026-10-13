@@ -352,6 +352,61 @@
     },
     {
       "id": 13,
+      "title": "Pulse",
+      "description": "A real-time odds calculation engine demonstrating low-latency event processing, deterministic provably-fair computation, Redis-based live state, PostgreSQL persistence, and WebSocket-based updates. A goal triggered in the dashboard streams recalculated odds and fairness proofs to every connected client.",
+      "category": "backend",
+      "tags": [
+        "Go",
+        "Node.js",
+        "Redis",
+        "PostgreSQL",
+        "WebSockets"
+      ],
+      "image": "./assets/img/pulse.webp",
+      "liveUrl": false,
+      "githubUrl": "https://github.com/somemorewater/pulse",
+      "featured": false,
+      "status": "development",
+      "stats": [
+        {
+          "icon": "bi-lightning-charge",
+          "label": "Real-Time Odds"
+        },
+        {
+          "icon": "bi-shield-check",
+          "label": "Provably Fair"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Verity",
+      "description": "An independent audit service for gaming platforms built around a committed-randomness protocol. Operators register games and run rounds that produce independently verifiable fairness evidence, with every state transition recorded in a tamper-evident hash-chained audit log anchored by signed checkpoints.",
+      "category": "backend",
+      "tags": [
+        "Go",
+        "PostgreSQL",
+        "Cryptography",
+        "REST API"
+      ],
+      "image": "./assets/img/verity.webp",
+      "liveUrl": false,
+      "githubUrl": "https://github.com/somemorewater/verity",
+      "featured": false,
+      "status": "development",
+      "stats": [
+        {
+          "icon": "bi-shield-check",
+          "label": "Fairness Audits"
+        },
+        {
+          "icon": "bi-link-45deg",
+          "label": "Hash-Chained Log"
+        }
+      ]
+    },
+    {
+      "id": 15,
       "title": "GhostTrack",
       "description": "A web service that brings multiple OSINT lookup capabilities behind a unified API. It integrates lookup tools for IP addresses, phone numbers, and usernames into a single service for streamlined investigation workflows.",
       "category": "backend",
@@ -373,7 +428,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": 16,
       "title": "Water Digital Corp.",
       "description": "A responsive business website for a digital services company helping small businesses establish an online presence. The site focuses on clear service presentation, responsive design, and turning visitors into potential clients.",
       "category": "web",
@@ -395,7 +450,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": 17,
       "title": "Kenri Ideas",
       "description": "A portfolio website for a graphic designer built around visual presentation. The layout keeps the designer's work at the center while providing a clean way to showcase services and creative projects.",
       "category": "web",
@@ -417,7 +472,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": 18,
       "title": "Age Verifier",
       "description": "A lightweight JavaScript application that validates profile information and calculates age from a user's date of birth. Built as a focused exercise in client-side validation, date handling, and immediate user feedback.",
       "category": "web",
@@ -439,7 +494,7 @@
       ]
     },
     {
-      "id": 17,
+      "id": 19,
       "title": "Solve This!",
       "description": "A combinatorics calculator for factorials, permutations, and combinations. It provides fast, accurate calculations through a simple interface designed for students and anyone working with basic counting problems.",
       "category": "tool",
@@ -461,7 +516,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": 20,
       "title": "Nigerian Flag Cursor",
       "description": "An interactive canvas experiment featuring a custom cursor inspired by the Nigerian flag and coat of arms. It combines canvas rendering with real-time mouse tracking to create a responsive visual effect.",
       "category": "web",
