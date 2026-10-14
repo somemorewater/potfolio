@@ -22,30 +22,14 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/chatgpt.css" />
   </head>
-  <body>
+  <body class="app-shell">
     <div class="site-bg" aria-hidden="true"></div>
 
-    <nav class="navbar">
-      <a href="./index.html" class="nav-brand" aria-label="Water home">
-        <span class="brand-text">WATER</span>
-      </a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="./index.html">About</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./articles.html">Articles</a></li>
-        <li><a href="./contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
+    <div id="portfolio-sidebar"></div>
 
     <main class="container contact-container">
       <section class="page-header fade-in">
@@ -63,7 +47,7 @@
           <div class="info-card">
             <div class="info-header">
               <div class="info-icon">
-                <i class="bi bi-person-circle"></i>
+                <i data-lucide="circle-user-round"></i>
               </div>
               <h2>Direct signal</h2>
             </div>
@@ -75,7 +59,7 @@
             <div class="contact-details">
               <div class="detail-item">
                 <div class="detail-icon">
-                  <i class="bi bi-geo-alt-fill"></i>
+                  <i data-lucide="map-pin"></i>
                 </div>
                 <div class="detail-content">
                   <h4>Location</h4>
@@ -85,7 +69,7 @@
 
               <div class="detail-item">
                 <div class="detail-icon">
-                  <i class="bi bi-telephone-fill"></i>
+                  <i data-lucide="phone"></i>
                 </div>
                 <div class="detail-content">
                   <h4>Phone</h4>
@@ -95,7 +79,7 @@
 
               <div class="detail-item">
                 <div class="detail-icon">
-                  <i class="bi bi-envelope-fill"></i>
+                  <i data-lucide="mail"></i>
                 </div>
                 <div class="detail-content">
                   <h4>Email</h4>
@@ -118,7 +102,7 @@
                   aria-label="GitHub"
                   class="social-icon"
                 >
-                  <i class="bi bi-github"></i>
+                  <i data-lucide="github"></i>
                 </a>
                 <a
                   href="https://x.com/SomeMoreWater"
@@ -126,7 +110,7 @@
                   aria-label="Twitter"
                   class="social-icon"
                 >
-                  <i class="bi bi-twitter-x"></i>
+                  <i data-lucide="twitter"></i>
                 </a>
                 <a
                   href="https://instagram.com/somemorewater"
@@ -134,7 +118,7 @@
                   aria-label="Instagram"
                   class="social-icon"
                 >
-                  <i class="bi bi-instagram"></i>
+                  <i data-lucide="instagram"></i>
                 </a>
               </div>
             </div>
@@ -145,7 +129,7 @@
           <div class="form-card fade-in">
             <div class="form-header">
               <div class="form-icon">
-                <i class="bi bi-envelope-paper"></i>
+                <i data-lucide="mail-open"></i>
               </div>
               <h3>Send an email</h3>
               <p>Share the context, goals, and where I can help.</p>
@@ -157,7 +141,7 @@
             >
               <div class="form-group">
                 <label for="name">
-                  <i class="bi bi-person"></i>
+                  <i data-lucide="user-round"></i>
                   Your Name
                 </label>
                 <input
@@ -172,7 +156,7 @@
 
               <div class="form-group">
                 <label for="email">
-                  <i class="bi bi-envelope"></i>
+                  <i data-lucide="mail"></i>
                   Your Email
                 </label>
                 <input
@@ -187,7 +171,7 @@
 
               <div class="form-group">
                 <label for="message">
-                  <i class="bi bi-chat-text"></i>
+                  <i data-lucide="message-square-text"></i>
                   Your Message
                 </label>
                 <textarea
@@ -202,7 +186,7 @@
 
               <button type="submit" class="submit-btn">
                 <span class="btn-text">Send Message</span>
-                <span class="btn-icon"><i class="bi bi-send"></i></span>
+                <span class="btn-icon"><i data-lucide="send"></i></span>
               </button>
             </form>
             <div id="form-status" class="form-status"></div>
@@ -211,7 +195,7 @@
           <div class="form-card whatsapp-card fade-in">
             <div class="form-header">
               <div class="form-icon whatsapp-icon">
-                <i class="bi bi-whatsapp"></i>
+                <i data-lucide="message-circle"></i>
               </div>
               <h3>Chat on WhatsApp</h3>
               <p>Use this for quick coordination or direct project conversations.</p>
@@ -223,7 +207,7 @@
             >
               <div class="form-group">
                 <label for="whatsappName">
-                  <i class="bi bi-person"></i>
+                  <i data-lucide="user-round"></i>
                   Your Name
                 </label>
                 <input
@@ -238,7 +222,7 @@
 
               <div class="form-group">
                 <label for="whatsappMessage">
-                  <i class="bi bi-chat-dots"></i>
+                  <i data-lucide="message-circle"></i>
                   Your Message
                 </label>
                 <textarea
@@ -253,7 +237,7 @@
 
               <button type="submit" class="submit-btn whatsapp-btn">
                 <span class="btn-text">Open WhatsApp</span>
-                <span class="btn-icon"><i class="bi bi-whatsapp"></i></span>
+                <span class="btn-icon"><i data-lucide="message-circle"></i></span>
               </button>
             </form>
           </div>
@@ -265,7 +249,7 @@
         <div class="quick-links">
           <a href="mailto:oboyiloejeh@gmail.com" class="quick-link">
             <div class="quick-icon">
-              <i class="bi bi-envelope-at"></i>
+              <i data-lucide="mail"></i>
             </div>
             <h4>Email Directly</h4>
             <p><span>oboyiloejeh@gmail.com</span></p>
@@ -273,7 +257,7 @@
 
           <a href="tel:+2349078954418" class="quick-link">
             <div class="quick-icon">
-              <i class="bi bi-telephone"></i>
+              <i data-lucide="phone"></i>
             </div>
             <h4>Call Me</h4>
             <p>+234 907 895 4418</p>
@@ -285,7 +269,7 @@
             class="quick-link"
           >
             <div class="quick-icon">
-              <i class="bi bi-github"></i>
+              <i data-lucide="github"></i>
             </div>
             <h4>GitHub</h4>
             <p>@somemorewater</p>
@@ -297,7 +281,7 @@
             class="quick-link"
           >
             <div class="quick-icon">
-              <i class="bi bi-whatsapp"></i>
+              <i data-lucide="message-circle"></i>
             </div>
             <h4>WhatsApp</h4>
             <p>Chat now</p>
@@ -314,21 +298,21 @@
             target="_blank"
             aria-label="GitHub"
           >
-            <i class="bi bi-github"></i>
+            <i data-lucide="github"></i>
           </a>
           <a
             href="https://x.com/SomeMoreWater"
             target="_blank"
             aria-label="Twitter"
           >
-            <i class="bi bi-twitter-x"></i>
+            <i data-lucide="twitter"></i>
           </a>
           <a
             href="https://instagram.com/somemorewater"
             target="_blank"
             aria-label="Instagram"
           >
-            <i class="bi bi-instagram"></i>
+            <i data-lucide="instagram"></i>
           </a>
         </div>
         <p class="footer-text">
@@ -340,6 +324,7 @@
       </div>
     </footer>
 
+    <script src="./assets/js/sidebar.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -348,5 +333,7 @@
         emailjs.init("JNp6M09W_SobUc7_L");
       })();
     </script>
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="./assets/js/icons.js"></script>
   </body>
 </html>

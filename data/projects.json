@@ -20,11 +20,11 @@
       "status": "development",
       "stats": [
         {
-          "icon": "bi-database",
+          "icon": "database",
           "label": "Key-Value Store"
         },
         {
-          "icon": "bi-hdd-network",
+          "icon": "hard-drive",
           "label": "TCP Server"
         }
       ]
@@ -34,7 +34,11 @@
       "title": "StudyGee",
       "description": "A Nigerian learning platform for exam practice, study materials, and AI-assisted learning. I built the backend systems powering users, subjects, questions, authentication, and study flows, with the architecture designed to support multiple platforms.",
       "category": "backend",
-      "tags": ["Rust/Axum", "AI", "Education"],
+      "tags": [
+        "Rust/Axum",
+        "AI",
+        "Education"
+      ],
       "image": "./assets/img/studygee-logo1.webp",
       "liveUrl": "https://studygee.com.ng",
       "githubUrl": false,
@@ -42,11 +46,11 @@
       "status": "development",
       "stats": [
         {
-          "icon": "bi-database",
+          "icon": "database",
           "label": "Backend API"
         },
         {
-          "icon": "bi-cpu",
+          "icon": "cpu",
           "label": "AI-Powered"
         }
       ]
@@ -71,11 +75,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi bi-coin",
+          "icon": "coins",
           "label": "Finance"
         },
         {
-          "icon": "bi-bar-chart-fill",
+          "icon": "chart-column",
           "label": "Data Visualization"
         }
       ]
@@ -101,11 +105,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi bi-card-image",
+          "icon": "image",
           "label": "File Sharing"
         },
         {
-          "icon": "bi-bar-chart-fill",
+          "icon": "chart-column",
           "label": "P2P"
         }
       ]
@@ -130,11 +134,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi bi-cart4",
+          "icon": "shopping-cart",
           "label": "Marketplace"
         },
         {
-          "icon": "bi bi-person-circle",
+          "icon": "circle-user-round",
           "label": "Social Platform"
         }
       ]
@@ -159,11 +163,11 @@
       "status": "development",
       "stats": [
         {
-          "icon": "bi-broadcast",
+          "icon": "radio-tower",
           "label": "Live Streaming"
         },
         {
-          "icon": "bi-chat-dots-fill",
+          "icon": "messages-square",
           "label": "Real-Time Chat"
         }
       ]
@@ -173,7 +177,13 @@
       "title": "Solana CRUD Smart Contract",
       "description": "An on-chain CRUD program built with Rust and Anchor for creating, updating, fetching, and deleting records on Solana. It explores PDA-based account management, ownership validation, event emission, and deterministic on-chain state.",
       "category": "blockchain",
-      "tags": ["Rust", "Solana", "Anchor", "Blockchain", "JavaScript"],
+      "tags": [
+        "Rust",
+        "Solana",
+        "Anchor",
+        "Blockchain",
+        "JavaScript"
+      ],
       "image": "./assets/img/rustxsolana.webp",
       "liveUrl": false,
       "githubUrl": "https://github.com/somemorewater/smart-contracts-test",
@@ -181,11 +191,11 @@
       "status": "development",
       "stats": [
         {
-          "icon": "bi-link-45deg",
+          "icon": "link",
           "label": "Solana Program"
         },
         {
-          "icon": "bi-shield-check",
+          "icon": "shield-check",
           "label": "PDA Accounts"
         }
       ]
@@ -195,7 +205,14 @@
       "title": "School Portal API",
       "description": "A school management and CBT backend for students, courses, examinations, results, and timed test sessions. It implements role-based access control, protected sessions, Redis caching, background jobs, and structured API documentation.",
       "category": "backend",
-      "tags": ["Node.js", "Express", "PostgreSQL", "Prisma", "Redis", "BullMQ"],
+      "tags": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Prisma",
+        "Redis",
+        "BullMQ"
+      ],
       "image": "./assets/img/nodejs-bg.webp",
       "liveUrl": false,
       "githubUrl": "https://github.com/somemorewater/school-portal-api",
@@ -203,11 +220,11 @@
       "status": "development",
       "stats": [
         {
-          "icon": "bi-shield-lock",
+          "icon": "lock",
           "label": "RBAC Auth"
         },
         {
-          "icon": "bi-mortarboard",
+          "icon": "graduation-cap",
           "label": "CBT Platform"
         }
       ]
@@ -232,11 +249,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi-bag-check",
+          "icon": "shopping-bag",
           "label": "Order API"
         },
         {
-          "icon": "bi-shield-lock",
+          "icon": "lock",
           "label": "OTP Auth"
         }
       ]
@@ -262,15 +279,15 @@
       "status": "development",
       "stats": [
         {
-          "icon": "bi-link-45deg",
+          "icon": "link",
           "label": "Solana Program"
         },
         {
-          "icon": "bi-shield-check",
+          "icon": "shield-check",
           "label": "PDA Accounts"
         },
         {
-          "icon": "bi-graph-up",
+          "icon": "chart-line",
           "label": "Prediction Markets"
         }
       ]
@@ -294,15 +311,15 @@
       "status": "completed",
       "stats": [
         {
-          "icon": "bi-book",
+          "icon": "book-open",
           "label": "Course Management"
         },
         {
-          "icon": "bi-mortarboard",
+          "icon": "graduation-cap",
           "label": "Student Learning"
         },
         {
-          "icon": "bi-bar-chart",
+          "icon": "chart-column",
           "label": "Progress Tracking"
         }
       ]
@@ -333,19 +350,19 @@
       "status": "development",
       "stats": [
         {
-          "icon": "bi-currency-exchange",
+          "icon": "arrow-left-right",
           "label": "Multi-Currency"
         },
         {
-          "icon": "bi-link-45deg",
+          "icon": "link",
           "label": "Blockchain Payments"
         },
         {
-          "icon": "bi-database",
+          "icon": "database",
           "label": "Double-Entry Ledger"
         },
         {
-          "icon": "bi-cpu",
+          "icon": "cpu",
           "label": "Rust Settlement"
         }
       ]
@@ -369,11 +386,11 @@
       "status": "development",
       "stats": [
         {
-          "icon": "bi-lightning-charge",
+          "icon": "zap",
           "label": "Real-Time Odds"
         },
         {
-          "icon": "bi-shield-check",
+          "icon": "shield-check",
           "label": "Provably Fair"
         }
       ]
@@ -396,11 +413,11 @@
       "status": "development",
       "stats": [
         {
-          "icon": "bi-shield-check",
+          "icon": "shield-check",
           "label": "Fairness Audits"
         },
         {
-          "icon": "bi-link-45deg",
+          "icon": "link",
           "label": "Hash-Chained Log"
         }
       ]
@@ -410,7 +427,11 @@
       "title": "GhostTrack",
       "description": "A web service that brings multiple OSINT lookup capabilities behind a unified API. It integrates lookup tools for IP addresses, phone numbers, and usernames into a single service for streamlined investigation workflows.",
       "category": "backend",
-      "tags": ["Python", "Web Service", "API"],
+      "tags": [
+        "Python",
+        "Web Service",
+        "API"
+      ],
       "image": "./assets/img/ghost.webp",
       "liveUrl": "https://ghost-tracker.onrender.com/",
       "githubUrl": "https://github.com/somemorewater/Ghost-tracker",
@@ -418,11 +439,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi-shield-check",
+          "icon": "shield-check",
           "label": "Security Tool"
         },
         {
-          "icon": "bi-search",
+          "icon": "search",
           "label": "OSINT"
         }
       ]
@@ -432,7 +453,11 @@
       "title": "Water Digital Corp.",
       "description": "A responsive business website for a digital services company helping small businesses establish an online presence. The site focuses on clear service presentation, responsive design, and turning visitors into potential clients.",
       "category": "web",
-      "tags": ["HTML/CSS", "Bootstrap", "Business"],
+      "tags": [
+        "HTML/CSS",
+        "Bootstrap",
+        "Business"
+      ],
       "image": "./assets/img/wdc.webp",
       "liveUrl": "https://waterdigitalcorp.name.ng",
       "githubUrl": "https://github.com/somemorewater/WaterDigitalCorp",
@@ -440,11 +465,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi-briefcase",
+          "icon": "briefcase",
           "label": "Business Site"
         },
         {
-          "icon": "bi-phone",
+          "icon": "phone",
           "label": "Responsive"
         }
       ]
@@ -454,7 +479,11 @@
       "title": "Kenri Ideas",
       "description": "A portfolio website for a graphic designer built around visual presentation. The layout keeps the designer's work at the center while providing a clean way to showcase services and creative projects.",
       "category": "web",
-      "tags": ["HTML/CSS", "Portfolio", "Design"],
+      "tags": [
+        "HTML/CSS",
+        "Portfolio",
+        "Design"
+      ],
       "image": "./assets/img/kenrideas.webp",
       "liveUrl": "https://kenrideas.netlify.app/",
       "githubUrl": "https://github.com/somemorewater/kenrideas",
@@ -462,11 +491,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi-easel",
+          "icon": "easel",
           "label": "Portfolio"
         },
         {
-          "icon": "bi-images",
+          "icon": "images",
           "label": "Visual-First"
         }
       ]
@@ -476,7 +505,10 @@
       "title": "Age Verifier",
       "description": "A lightweight JavaScript application that validates profile information and calculates age from a user's date of birth. Built as a focused exercise in client-side validation, date handling, and immediate user feedback.",
       "category": "web",
-      "tags": ["JavaScript", "Form"],
+      "tags": [
+        "JavaScript",
+        "Form"
+      ],
       "image": "./assets/img/age.webp",
       "liveUrl": "https://somemorewater.github.io/javaScriptAgeChecker/",
       "githubUrl": "https://github.com/somemorewater/javaScriptAgeChecker",
@@ -484,11 +516,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi-code-square",
+          "icon": "square-code",
           "label": "Vanilla JS"
         },
         {
-          "icon": "bi-check2-circle",
+          "icon": "circle-check",
           "label": "Form Validation"
         }
       ]
@@ -498,7 +530,10 @@
       "title": "Solve This!",
       "description": "A combinatorics calculator for factorials, permutations, and combinations. It provides fast, accurate calculations through a simple interface designed for students and anyone working with basic counting problems.",
       "category": "tool",
-      "tags": ["JavaScript", "Math"],
+      "tags": [
+        "JavaScript",
+        "Math"
+      ],
       "image": "./assets/img/factorials.webp",
       "liveUrl": "https://somemorewater.github.io/factorials/",
       "githubUrl": "https://github.com/somemorewater/factorials",
@@ -506,11 +541,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi-star-fill",
+          "icon": "star",
           "label": "Educational Tool"
         },
         {
-          "icon": "bi-lightning-fill",
+          "icon": "zap",
           "label": "Fast Calculations"
         }
       ]
@@ -520,7 +555,11 @@
       "title": "Nigerian Flag Cursor",
       "description": "An interactive canvas experiment featuring a custom cursor inspired by the Nigerian flag and coat of arms. It combines canvas rendering with real-time mouse tracking to create a responsive visual effect.",
       "category": "web",
-      "tags": ["JavaScript", "Canvas", "Creative"],
+      "tags": [
+        "JavaScript",
+        "Canvas",
+        "Creative"
+      ],
       "image": "./assets/img/flag.webp",
       "liveUrl": "https://somemorewater.github.io/Nigerian-flag/",
       "githubUrl": "https://github.com/somemorewater/Nigerian-flag",
@@ -528,11 +567,11 @@
       "status": "live",
       "stats": [
         {
-          "icon": "bi-palette",
+          "icon": "palette",
           "label": "Creative"
         },
         {
-          "icon": "bi-cursor",
+          "icon": "mouse-pointer-2",
           "label": "Custom Cursor"
         }
       ]
@@ -542,27 +581,27 @@
     {
       "id": "all",
       "name": "All Projects",
-      "icon": "bi-grid-3x3"
+      "icon": "layout-grid"
     },
     {
       "id": "web",
       "name": "Web Apps",
-      "icon": "bi-globe"
+      "icon": "globe"
     },
     {
       "id": "tool",
       "name": "Tools",
-      "icon": "bi-wrench"
+      "icon": "wrench"
     },
     {
       "id": "backend",
       "name": "Backend",
-      "icon": "bi-server"
+      "icon": "server"
     },
     {
       "id": "blockchain",
       "name": "Blockchain",
-      "icon": "bi-link-45deg"
+      "icon": "link"
     }
   ]
 }

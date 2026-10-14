@@ -12,27 +12,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/projects.css" />
+    <link rel="stylesheet" href="./assets/css/chatgpt.css" />
 </head>
-<body>
+<body class="app-shell">
     <div class="site-bg" aria-hidden="true"></div>
 
-    <nav class="navbar">
-        <a href="./index.html" class="nav-brand" aria-label="Water home">
-            <span class="brand-text">WATER</span>
-        </a>
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-            <span class="hamburger"></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="./index.html">About</a></li>
-            <li><a href="./projects.html">Projects</a></li>
-            <li><a href="./articles.html">Articles</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="portfolio-sidebar"></div>
 
     <main class="container article-container">
         <section id="article-header" class="page-header fade-in">
@@ -53,13 +40,13 @@
         <div class="footer-content">
             <div class="footer-social">
                 <a href="https://github.com/somemorewater" target="_blank" aria-label="GitHub">
-                    <i class="bi bi-github"></i>
+                    <i data-lucide="github"></i>
                 </a>
                 <a href="https://x.com/SomeMoreWater" target="_blank" aria-label="Twitter">
-                    <i class="bi bi-twitter-x"></i>
+                    <i data-lucide="twitter"></i>
                 </a>
                 <a href="https://instagram.com/somemorewater" target="_blank" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
+                    <i data-lucide="instagram"></i>
                 </a>
             </div>
             <p class="footer-text">
@@ -71,7 +58,10 @@
         </div>
     </footer>
 
+    <script src="./assets/js/sidebar.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/article.js"></script>
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="./assets/js/icons.js"></script>
 </body>
 </html>

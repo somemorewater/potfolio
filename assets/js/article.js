@@ -41,11 +41,11 @@ async function loadArticle() {
         // Build article body
         const imgHtml = article.image ? `<div class="project-image"><img src="${article.image}" alt="${article.title}"/></div>` : '';
         const tagsHtml = (article.tags || []).map(t => `<span class="tag">${t}</span>`).join(' ');
-        const statsHtml = (article.stats || []).map(s => `<div class="stat"><i class="${s.icon}"></i><span>${s.label}</span></div>`).join('');
+        const statsHtml = (article.stats || []).map(s => `<div class="stat"><i data-lucide="${s.icon}"></i><span>${s.label}</span></div>`).join('');
 
-        const sourceLink = article.sourceUrl ? `<a href="${article.sourceUrl}" target="_blank" class="project-link">Source <i class="bi bi-github"></i></a>` : '';
+        const sourceLink = article.sourceUrl ? `<a href="${article.sourceUrl}" target="_blank" rel="noopener noreferrer" class="project-link">Source <i data-lucide="github"></i></a>` : '';
         const slugUrl = `https://somemorewater.name.ng/article.html?id=${article.id}`;
-        const shareButton = `<button type="button" class="project-link share-btn" data-url="${slugUrl}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
+        const shareButton = `<button type="button" class="project-link share-btn" data-url="${slugUrl}" data-title="${escapeHtml(article.title)}"><i data-lucide="share-2"></i><span>Share</span></button>`;
 
         container.innerHTML = `
             ${imgHtml}
@@ -61,6 +61,7 @@ async function loadArticle() {
 
         // Attach share handler for the reader share button
         setupArticleShare();
+        if (typeof window.refreshIcons === 'function') window.refreshIcons();
 
     } catch (err) {
         console.error(err);

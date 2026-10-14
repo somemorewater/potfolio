@@ -18,6 +18,10 @@ async function loadProjects() {
         // Initialize the page
         renderFilterButtons();
         renderProjects();
+        requestAnimationFrame(() => {
+            const target = document.querySelector(window.location.hash);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
         
     } catch (error) {
         console.error('Error loading projects:', error);
@@ -36,7 +40,7 @@ function renderFilterButtons() {
         const isActive = category.id === 'all' ? 'active' : '';
         return `
             <button class="filter-btn ${isActive}" data-filter="${category.id}">
-                <i class="${category.icon}"></i>
+                <i data-lucide="${category.icon}"></i>
                 <span>${category.name}</span>
             </button>
         `;
@@ -73,9 +77,7 @@ function renderProjects(filterCategory = 'all') {
     }).join('');
     
     projectsGrid.innerHTML = projectsHTML;
-    
-    // Add entrance animations
-    animateProjectCards();
+    if (typeof window.refreshIcons === 'function') window.refreshIcons();
     
     // Add event listeners for interactive features
     attachProjectListeners();
@@ -87,7 +89,7 @@ function renderProjects(filterCategory = 'all') {
 function createProjectCard(project, index) {
     const featuredBadge = project.featured ? `
         <div class="featured-badge">
-            <i class="bi bi-star-fill"></i>
+            <i data-lucide="star"></i>
             <span>Featured</span>
         </div>
     ` : '';
@@ -98,7 +100,7 @@ function createProjectCard(project, index) {
     
     const stats = project.stats.map(stat => `
         <div class="stat">
-            <i class="${stat.icon}"></i>
+            <i data-lucide="${stat.icon}"></i>
             <span>${stat.label}</span>
         </div>
     `).join('');
@@ -106,30 +108,34 @@ function createProjectCard(project, index) {
     const overlayContent = project.status === 'development' 
         ? '<span class="status-badge">In Development</span>'
         : project.liveUrl 
-            ? `<a href="${project.liveUrl}" target="_blank" class="preview-btn">
-                <i class="bi bi-eye"></i>
+            ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="preview-btn">
+                <i data-lucide="eye"></i>
                 <span>Live Demo</span>
                </a>`
             : '';
     
+    const detailsLink = `<a href="./project.html?id=${project.id}" class="project-link">
+               View details <i data-lucide="arrow-right"></i>
+           </a>`;
+
     const liveLink = project.liveUrl 
-        ? `<a href="${project.liveUrl}" target="_blank" class="project-link primary">
-               Open project <i class="bi bi-arrow-right"></i>
+        ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link primary">
+               Open project <i data-lucide="arrow-right"></i>
            </a>`
         : '';
     
     const githubLink = project.githubUrl
-        ? `<a href="${project.githubUrl}" target="_blank" class="project-link">
-               Source code <i class="bi bi-github"></i>
+        ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
+               Source code <i data-lucide="github"></i>
            </a>`
         : '';
     
     const footerLinks = liveLink || githubLink
-        ? `${liveLink}${githubLink}`
-        : `<span class="project-link disabled">Coming Soon</span>`;
+        ? `${detailsLink}${liveLink}${githubLink}`
+        : `${detailsLink}<span class="project-link disabled">Coming Soon</span>`;
     
     return `
-        <article class="project-card ${project.featured ? 'featured' : ''}" data-category="${project.category}" data-index="${index}">
+        <article id="project-${project.id}" class="project-card ${project.featured ? 'featured' : ''}" data-category="${project.category}" data-index="${index}">
             ${featuredBadge}
             <div class="project-image">
                 <img src="${project.image}" alt="${project.title} preview" loading="lazy"/>
@@ -140,7 +146,7 @@ function createProjectCard(project, index) {
             <div class="project-content">
                 <div class="project-meta">
                     <span class="project-category">${project.category}</span>
-                    <span class="status-badge">${project.status === 'development' ? 'In Development' : 'Live'}</span>
+                    <span class="status-badge">${project.status.replace(/\b\w/g, letter => letter.toUpperCase())}</span>
                 </div>
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
@@ -174,33 +180,7 @@ function handleFilterClick(event) {
     // Update current filter
     currentFilter = filterValue;
     
-    // Re-render projects with animation
-    const projectsGrid = document.getElementById('projects-grid');
-    projectsGrid.style.opacity = '0';
-    
-    setTimeout(() => {
-        renderProjects(filterValue);
-        projectsGrid.style.transition = 'opacity 0.5s ease-out';
-        projectsGrid.style.opacity = '1';
-    }, 300);
-}
-
-// ===================================
-// Animate Project Cards Entrance
-// ===================================
-function animateProjectCards() {
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-            card.style.transition = 'all 0.6s ease-out';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, index * 100);
-    });
+    renderProjects(filterValue);
 }
 
 // ===================================
@@ -224,15 +204,16 @@ function showErrorMessage() {
     
     projectsGrid.innerHTML = `
         <div class="error-message">
-            <i class="bi bi-exclamation-triangle" style="font-size: 3rem; color: #f87171; margin-bottom: 1rem;"></i>
+            <i data-lucide="triangle-alert" style="font-size: 3rem; color: #f87171; margin-bottom: 1rem;"></i>
             <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Failed to Load Projects</h3>
             <p style="color: var(--text-muted);">Please check your connection and try again.</p>
             <button onclick="loadProjects()" class="btn btn-primary" style="margin-top: 1.5rem;">
                 <span>Retry</span>
-                <i class="bi bi-arrow-clockwise"></i>
+                <i data-lucide="rotate-cw"></i>
             </button>
         </div>
     `;
+    if (typeof window.refreshIcons === 'function') window.refreshIcons();
 }
 
 // ===================================

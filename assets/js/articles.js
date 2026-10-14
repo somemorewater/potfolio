@@ -36,7 +36,7 @@ function renderFilterButtons() {
         const isActive = category.id === 'all' ? 'active' : '';
         return `
             <button class="filter-btn ${isActive}" data-filter="${category.id}">
-                <i class="${category.icon}"></i>
+                <i data-lucide="${category.icon}"></i>
                 <span>${category.name}</span>
             </button>
         `;
@@ -73,9 +73,7 @@ function renderArticles(filterCategory = 'all') {
     }).join('');
     
     articlesGrid.innerHTML = articlesHTML;
-    
-    // Add entrance animations
-    animateProjectCards();
+    if (typeof window.refreshIcons === 'function') window.refreshIcons();
     
     // Add event listeners for interactive features
     attachProjectListeners();
@@ -88,7 +86,7 @@ function renderArticles(filterCategory = 'all') {
 function createArticleCard(article, index) {
     const featuredBadge = article.featured ? `
         <div class="featured-badge">
-            <i class="bi bi-star-fill"></i>
+            <i data-lucide="star"></i>
             <span>Featured</span>
         </div>
     ` : '';
@@ -99,7 +97,7 @@ function createArticleCard(article, index) {
     
     const stats = article.stats ? article.stats.map(stat => `
         <div class="stat">
-            <i class="${stat.icon}"></i>
+            <i data-lucide="${stat.icon}"></i>
             <span>${stat.label}</span>
         </div>
     `).join('') : '';
@@ -108,22 +106,22 @@ function createArticleCard(article, index) {
     const overlayContent = article.status === 'development'
         ? '<span class="status-badge">In Development</span>'
         : `<a href="${articleUrl}" class="preview-btn">
-                <i class="bi bi-eye"></i>
+                <i data-lucide="eye"></i>
                 <span>Read</span>
            </a>`;
 
     const readLink = `<a href="${articleUrl}" class="project-link primary">
-               Read article <i class="bi bi-arrow-right"></i>
+               Read article <i data-lucide="arrow-right"></i>
            </a>`;
     
     const sourceLink = article.sourceUrl
-        ? `<a href="${article.sourceUrl}" target="_blank" class="project-link">
-               Source <i class="bi bi-github"></i>
+        ? `<a href="${article.sourceUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
+               Source <i data-lucide="github"></i>
            </a>`
         : '';
     
     const absolute = `https://somemorewater.name.ng/article.html?id=${article.id}`;
-    const shareButton = `<button type="button" class="project-link share-btn" data-url="${absolute}" data-title="${escapeHtml(article.title)}"><i class="bi bi-share"></i><span>Share</span></button>`;
+    const shareButton = `<button type="button" class="project-link share-btn" data-url="${absolute}" data-title="${escapeHtml(article.title)}"><i data-lucide="share-2"></i><span>Share</span></button>`;
 
     const footerLinks = (readLink || sourceLink)
         ? `${readLink}${sourceLink}${shareButton}`
@@ -224,33 +222,7 @@ function handleFilterClick(event) {
     // Update current filter
     currentFilter = filterValue;
     
-    // Re-render articles with animation
-    const articlesGrid = document.getElementById('articles-grid');
-    articlesGrid.style.opacity = '0';
-    
-    setTimeout(() => {
-        renderArticles(filterValue);
-        articlesGrid.style.transition = 'opacity 0.5s ease-out';
-        articlesGrid.style.opacity = '1';
-    }, 300);
-}
-
-// ===================================
-// Animate Cards Entrance
-// ===================================
-function animateProjectCards() {
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-            card.style.transition = 'all 0.6s ease-out';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, index * 100);
-    });
+    renderArticles(filterValue);
 }
 
 // ===================================
@@ -274,15 +246,16 @@ function showErrorMessage() {
     
     articlesGrid.innerHTML = `
         <div class="error-message">
-            <i class="bi bi-exclamation-triangle" style="font-size: 3rem; color: #f87171; margin-bottom: 1rem;"></i>
+            <i data-lucide="triangle-alert" style="font-size: 3rem; color: #f87171; margin-bottom: 1rem;"></i>
             <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Failed to Load Articles</h3>
             <p style="color: var(--text-muted);">Please check your connection and try again.</p>
             <button onclick="loadArticles()" class="btn btn-primary" style="margin-top: 1.5rem;">
                 <span>Retry</span>
-                <i class="bi bi-arrow-clockwise"></i>
+                <i data-lucide="rotate-cw"></i>
             </button>
         </div>
     `;
+    if (typeof window.refreshIcons === 'function') window.refreshIcons();
 }
 
 // ===================================

@@ -1,0 +1,14 @@
+{
+  "responses": [
+    "That request has been carefully queued behind a Redis cache that insists it is not a database.",
+    "I checked the logs. They said “works on my machine,” then requested a snack break.",
+    "A Rust compiler has reviewed the plan and would like three more enums before lunch.",
+    "That sounds promising. I have assigned it a branch name and one suspiciously optimistic TODO.",
+    "The architecture nods approvingly, although one microservice is pretending not to hear this.",
+    "Excellent. The database has opened a support ticket about being asked to store feelings.",
+    "I ran the idea through a load test. It survived, but the CSS asked for a quieter environment.",
+    "Consider it noted. The bug tracker has already given it a tiny party hat.",
+    "That is exactly the sort of problem a well-timed console.log claims to understand.",
+    "Bold move. Somewhere, a Docker container is now feeling very included."
+  ]
+}
