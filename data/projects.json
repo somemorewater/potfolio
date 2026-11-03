@@ -30,6 +30,39 @@
       ]
     },
     {
+      "id": 21,
+      "title": "Wave VM",
+      "description": "An open-source desktop virtual machine manager built with Tauri 2, Rust, and QEMU. Designed to simplify VM creation and management, it features configurable virtual machines, QCOW2 disk provisioning, lifecycle management, and a graphical console powered by noVNC.",
+      "category": "desktop",
+      "tags": [
+        "Rust",
+        "Tauri",
+        "QEMU",
+        "Virtualization",
+        "Linux",
+        "Systems Programming"
+      ],
+      "image": "./assets/img/wavevm.webp",
+      "liveUrl": "https://wavevm.vercel.app/",
+      "githubUrl": "https://github.com/somemorewater/waveVM",
+      "featured": true,
+      "status": "development",
+      "stats": [
+        {
+          "icon": "monitor",
+          "label": "Desktop VM Manager"
+        },
+        {
+          "icon": "cpu",
+          "label": "QEMU Virtualization"
+        },
+        {
+          "icon": "terminal",
+          "label": "Rust Backend"
+        }
+      ]
+    },
+    {
       "id": 2,
       "title": "StudyGee",
       "description": "A Nigerian learning platform for exam practice, study materials, and AI-assisted learning. I built the backend systems powering users, subjects, questions, authentication, and study flows, with the architecture designed to support multiple platforms.",
@@ -602,6 +635,11 @@
       "id": "blockchain",
       "name": "Blockchain",
       "icon": "link"
+    },
+    {
+      "id": "desktop",
+      "name": "Desktop Apps",
+      "icon": "monitor"
     }
   ]
 }
